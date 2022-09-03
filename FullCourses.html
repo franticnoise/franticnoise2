@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frantic Noise</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      href="img/tab.webp"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/tab.webp"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="menu.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="footer.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="headerparent">
+        <div class="headerchild">
+          <img
+            class="franticlogo"
+            src="img/newlogoFrantic.png"
+            width="300"
+          />
+          Frantic Noise <br />
+          <p style="font-size: 17px">Acoustic Levitation Engineer</p>
+        </div>
+      </div>
+      <div id="myNav" class="wrapper"></div>
+      <iframe
+        height="500"
+        src="actualcourses.html"
+        width="800"
+        class="mainiframe"
+        allowtransparency="true"
+      >
+      </iframe>
+      <div id="footer" class="footer"></div>
+    </main>
+  </body>
+</html>
+
+<script src="vanta/three.min.js"></script>
+<script src="vanta/vanta.net.min.js"></script>
+<script>
+  VANTA.NET({
+    el: 'html',
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+  });
+</script>
