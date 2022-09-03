@@ -8,6 +8,7 @@ document.getElementById('myNav').innerHTML =
   '    <li><a href=index.html><span class=text>Homepage</span></a></li>' +
   '    <li><a href=Bandcamp.html><span class=text>Released Music</span></a></li>' +
   '    <li><a href=Videos.html><span class=text>Party Videos</span></a></li>' +
+  '    <li><a href=Tutorials.html><span class=text>Video Tutorials</span></a></li>' +
   '   <li><a href=Soundcloud.html><span class=text>Soundcloud</span></a></li>' +
   ' </ul>' +
   '</div>' +
