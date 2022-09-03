@@ -18,7 +18,7 @@ document.getElementById('myNav').innerHTML =
   '  <ul>' +
   '    <li><a href=VSTPresets.html><span class=text>Vital Serum VirusTi Phaseplant & more</span></a></li>' +
   '    <li><a href=Libraries.html><span class=text>Soundbanks & Wavetables</span></a></li>' +
-  '    <li><a href=Templates.html><span class=text>Full Track Templates</span></a></li>' +
+  '    <li><a href=Templates.html><span class=text>Remix Packs & Templates</span></a></li>' +
   "    <li><a href=FullCourses.html><span class='text'>Online Courses & Webinars</span></a></li>" +
   "    <li><a href=Memberships.html><span class='text'>Monthly Memberships</span></a></li>" +
   '  </ul>' +
