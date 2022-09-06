@@ -34,5 +34,6 @@ document.getElementById('myNav').innerHTML =
   '    <li><a href=http://www.soundcloud.com/franticnoise target=_blank><span class=text>Soundcloud</span></a></li>' +
   '    <li><a href=http://www.facebook.com/franticnoise target=_blank><span class=text>Facebook</span></a></li>' +
   '    <li><a href=http://www.twitch.com/franticnoise target=_blank><span class=text>Twitch</span></a></li>' +
+  '    <li><a href=https://discord.gg/mkzpR8NgxR target=_blank><span class=text>Discord</span></a></li>' +
   '  </ul>' +
   '</div>';
