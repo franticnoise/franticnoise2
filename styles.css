@@ -36,7 +36,7 @@ body {
   border-radius: 9px;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   box-shadow: 2px 2px 10px rgb(0, 0, 0);
-  width:700px;
+  width:670px;
   border:1px solid #000000;
   align-self: center;
   
@@ -96,6 +96,7 @@ h1 {
   font-weight: bold;
   font-size: 2.5rem;
 }
+
 .footer {
   font-size: smaller;
   text-align: center;
@@ -246,7 +247,7 @@ h1 {
   margin-top: 10px;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: center !important;
   border: 0px solid #ffffff;
 }
 
@@ -285,7 +286,8 @@ h1 {
   margin-top: 0px;
   padding-right:00px;
   padding: 0px;
-  border:3px solid #000000;
+  margin-bottom:4px;
+  border:1px solid #000000;
   border-radius: 5px;
   align-self: center;
 }
