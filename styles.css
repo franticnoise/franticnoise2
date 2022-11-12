@@ -107,7 +107,7 @@ h1 {
 .wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 0px;
   border: #000;
   border-width: 0px;
   border-style: solid;
