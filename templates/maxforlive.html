@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frantic Noise</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/style-iframe.css" />
+  </head>
+ 
+  <body style="background-color: transparent">
+    <main style="margin-left:0px;">
+     
+      <p  class="infotext">
+        This is some ideas i've been playing around in my free time.
+        Let me know about if you have suggestions, they are are very welcome =)
+      </p>
+      <div class="mainlandingparent">
+        <div id="container">
+         
+
+       
+          <script type="module">              
+           // import { createGumroad } from "../src/scripts2.js";
+            let gumroad_list = [
+              ['144d4aa.png', 'FMGigaSynth', 1],
+              ['MAXFORLIVE.png', 'oNtsU', 2]
+            ];      
+            
+            console.table(gumroad_list)
+            gumroad_list.forEach((activity) => {
+              const gumroadList = document.getElementById("container");
+              gumroadList.className = "js-container js-container-dual";
+              let createGumroadDiv = document.createElement("div");
+    
+              createGumroadDiv.id = activity[2];
+              createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
+    
+              gumroadList.appendChild(createGumroadDiv);
+              console.table(activity);
+          
+              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${activity[0]}"/>
+                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+              
+              
+            });            
+
+            //createGumroad('courses.png','dbVoFX','1');
+            //createGumroad('FINALTHUMB1000PX-MULTIPLE.png','uzwjxu','2');
+          </script>
+          </div>
+        </div>
+   
+    </main>
+  </body>
+</html>

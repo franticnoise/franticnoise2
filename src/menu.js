@@ -20,7 +20,8 @@ document.getElementById('myNav').innerHTML =
   '    <li><a href=index.html?page=presets><span class=text>Vital Serum VirusTi Phaseplant & more</span></a></li>' +
   '    <li><a href=index.html?page=libraries><span class=text>Soundbanks & Wavetables</span></a></li>' +
   '    <li><a href=index.html?page=templates><span class=text>Remix Packs & Templates</span></a></li>' +
-  "    <li><a href=index.html?page=courses><span class='text'>Online Courses & Webinars</span></a></li>" +
+  '    <li><a href=index.html?page=maxforlive><span class=text>Max for Live Devices</span></a></li>' +
+  "    <li><a href=index.html?page=courses><span class='text'>Courses & Webinars</span></a></li>" +
   "    <li><a href=index.html?page=memberships><span class='text'>Monthly Memberships</span></a></li>" +
   '  </ul>' +
   '</div>' +
