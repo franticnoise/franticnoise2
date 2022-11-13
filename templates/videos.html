@@ -10,47 +10,52 @@
   </head>
 
   <body style="background-color: transparent">
-    <main
-      style="
-        width: 100%;
-      "
-    >
-      <div
-        class="mainlandingparent"
-        style="
-          margin-left: 35px;
-          margin-top: 0px;
-          display: table;
-          width: 0%;
-          justify-content: center;
-        "
-      >
-        <p class="infotext">
-          Videos taken from my second youtube <a href="http://www.youtube.com/z1priano" target="_blank" style="color: #d889f0" >
-            channel</a><br /> with party and tour footage going back to 2006.<br />
-        </p>
-        <div
-          id="container"
-          style="
-            margin-left: 20px;
-            margin-top: 0px;
-            border: 0px solid #000000;
-            width: 100%;
-          "
+    <main style="width: 100%">
+      <p class="infotext">
+        Videos taken from my second youtube
+        <a
+          href="http://www.youtube.com/z1priano"
+          target="_blank"
+          style="color: #d889f0"
         >
-          <div id="row"><div class="cell" id="1"></div></div>
-          <div id="row"><div class="cell" id="2"></div></div>
-          <div id="row"><div class="cell" id="3"></div></div>
-          <div id="row"><div class="cell" id="4"></div></div>
+          channel</a
+        >
+        with party and <br />tour footage going back to 2006.<br />
+      </p>
+      <div
+        id="container"
+        class="js-container"
+        style="margin-top: 0px; width: 100%"
+      >
+      
+        <script type="module">
+          let youtube_list = [
+            ["2kRfHfbx1dM", 1],
+            ["vSIs9DxuEzE", 2],
+            ["NzxsqsU5x_4", 3],
+            ["_rnSHTN0nRo", 4],
+          ];
 
-          <script type="module">
-            import { createYoutube } from "../src/scripts2.js";
-            createYoutube("2kRfHfbx1dM", 1);
-            createYoutube("vSIs9DxuEzE", 2);
-            createYoutube("NzxsqsU5x_4", 3);
-            createYoutube("_rnSHTN0nRo", 4);
-          </script>
-        </div>
+          import { createYoutube } from "../src/scripts2.js";
+
+          youtube_list.forEach((activity) => {
+            const youtubeList = document.getElementById("container");
+            youtubeList.className = "js-container";
+            let createYoutubeDiv = document.createElement("div");
+
+            createYoutubeDiv.id = activity[1];
+            createYoutubeDiv.className = "js-cell";
+
+            youtubeList.appendChild(createYoutubeDiv);
+
+            createYoutube(activity[0], activity[1]);
+          });
+
+          //createYoutube("2kRfHfbx1dM", 1);
+          //createYoutube("vSIs9DxuEzE", 2);
+          //createYoutube("NzxsqsU5x_4", 3);
+          //createYoutube("_rnSHTN0nRo", 4);
+        </script>
       </div>
     </main>
   </body>

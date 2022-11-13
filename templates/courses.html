@@ -20,24 +20,41 @@
         downloads.
       </p>
       <div class="mainlandingparent">
-        <div id="container" style="border: 0px solid #000000; margin-top: 10px;width: 50%;">
+        <div id="container">
          
 
-            <div id="row">
-              <div class="cell" id="1"></div>
-              <div class="cell" id="2"></div>
-            </div>
-
-           
-           
+       
           <script type="module">              
-            import { createGumroad } from "../src/scripts2.js";
-            createGumroad('courses.png','dbVoFX','1');
-            createGumroad('FINALTHUMB1000PX-MULTIPLE.png','uzwjxu','2');
+           // import { createGumroad } from "../src/scripts2.js";
+            let gumroad_list = [
+              ['courses.png', 'dbVoFX', 1],
+              ['FINALTHUMB1000PX-MULTIPLE.png', 'uzwjxu', 2]
+            ];      
+            
+            console.table(gumroad_list)
+            gumroad_list.forEach((activity) => {
+              const gumroadList = document.getElementById("container");
+              gumroadList.className = "js-container js-container-dual";
+              let createGumroadDiv = document.createElement("div");
+    
+              createGumroadDiv.id = activity[2];
+              createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
+    
+              gumroadList.appendChild(createGumroadDiv);
+              console.table(activity);
+          
+              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${activity[0]}"/>
+                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+              
+              
+            });            
+
+            //createGumroad('courses.png','dbVoFX','1');
+            //createGumroad('FINALTHUMB1000PX-MULTIPLE.png','uzwjxu','2');
           </script>
           </div>
         </div>
-      </div>
+   
     </main>
   </body>
 </html>

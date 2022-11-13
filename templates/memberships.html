@@ -12,34 +12,47 @@
   
   <body style="background-color: transparent">
     <main style="width: 100%; text-align: center">
+      
       <p class="infotext" >
         Get streaming access to 120+ hours of recorded courses & workshops thru
         my gumroad Memberships plus other benefits like monthly presets and
         mastering services! :)
       </p>
 
-      <div
-        class="mainlandingparent"
-        style="
-          margin-top: 0px;
-          display: flex;
-          width: 100%;
-          justify-content: center;
-        "
-      >
-        <div id="container" style="width: 50%; border: 0px solid #000000">          
-          <div id="row">         
-            <div class="cell" id="1"></div>
-            <div class="cell" id="2"></div>    
-            <script type="module">              
-              import { createGumroad } from "../src/scripts2.js";
-              createGumroad('GOLDMEMBERSHIPSQUARE2.png','xAmTU','1');
-              createGumroad('SILVERMEMBERSHIPSQUARE2.png','HMMSm','2');
+      
+        <div id="container" >          
+            
+            <script type="module">  
+              let gumroad_list = [
+                ['GOLDMEMBERSHIPSQUARE2.png', 'xAmTU', 1],
+                ['SILVERMEMBERSHIPSQUARE2.png', 'HMMSm', 2]
+              ];      
+              
+              console.table(gumroad_list)
+              gumroad_list.forEach((activity) => {
+                const gumroadList = document.getElementById("container");
+                gumroadList.className = "js-container js-container-dual";
+                let createGumroadDiv = document.createElement("div");
+      
+                createGumroadDiv.id = activity[2];
+                createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
+      
+                gumroadList.appendChild(createGumroadDiv);
+                console.table(activity);
+            
+                document.getElementById(activity[2]).innerHTML = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${activity[0]}"/>
+                  <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+                
+                //createGumroad(activity[2], activity[0], activity[1]);
+              });            
+              //import { createGumroad } from "../src/scripts2.js";
+              //createGumroad('GOLDMEMBERSHIPSQUARE2.png','xAmTU','1');
+              //createGumroad('SILVERMEMBERSHIPSQUARE2.png','HMMSm','2');
             </script>
-          </div>
-        </div>
+          </div> </div>
         
-      </div>
+        
+      
       <p
         style="
           margin-top: 00px;
@@ -54,7 +67,7 @@
           src="../img/147197028_141610631127819_7386312210166532991_n.jpg"
           style="width: 500px"
         />
-      </p>
+      </p></div>
     </main>
   </body>
 </html>

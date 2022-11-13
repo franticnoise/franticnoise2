@@ -25,14 +25,9 @@
         class="mainlandingparent"
         style="margin-top: 0px; display: table; width: 100%"
       >
-        <div id="container" style="margin-top: 0px; width: 100%">
-          <div id="row"><div class="cell" id="1"></div></div>
-          <div id="row"><div class="cell" id="2"></div></div>
-          <div id="row"><div class="cell" id="3"></div></div>
-          <div id="row"><div class="cell" id="4"></div></div>
-          <div id="row"><div class="cell" id="5"></div></div>
-
-          <script>
+        <div id="container" class="js-container" style="margin-top: 0px; width: 100%;">
+          
+          <script type="module">
             let soundcloud_list = [
               [1368097705, 1],
               [224303366, 2],
@@ -40,18 +35,19 @@
               [466712427, 4],
               [849755113, 5],
             ];
-            let i = 0;
-            soundcloud_list.forEach((activity) => {
-              console.log(activity[i]);
-              i++;
-              document.write('<div id="row"><div class="cell" id="1"></div></div>')
-            });
-          </script>
-          <script type="module">
             import { createSoundcloud } from "../src/scripts2.js";
 
             soundcloud_list.forEach((activity) => {
-                      
+
+              const soundcloudList = document.getElementById("container");
+              soundcloudList.className = "js-container";
+              let createSoundcloudDiv = document.createElement("div");
+
+              createSoundcloudDiv.id = activity[1];
+              createSoundcloudDiv.className = "js-cell";
+
+              soundcloudList.appendChild(createSoundcloudDiv);
+
               createSoundcloud(activity[0], activity[1]);
             });
 

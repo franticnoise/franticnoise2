@@ -18,29 +18,39 @@
       </p> </h3>
       <iframe width="608" height="342" src="https://www.youtube.com/embed/JyS-DUehBeQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border-radius:18px;" allowfullscreen></iframe>
         
-       
-      <div class="mainlandingparent">
-
-        <div id="container" style="width: 80%;">
-          <div id="row">
-            <div class="cell" id="1"></div>
-            <div class="cell" id="2"></div>
-          </div>
-          <div id="row">
-            <div class="cell" id="3"></div>
-            <div class="cell" id="4"></div>
-          </div>
-
+        <div id="container" style="width: 100%;">
+      
+  
+        <script type="module">    
+          let gumroad_list = [
+            ['WAVETABLE-ESSENTIALS-FINALTHUMB.png', 'dtavn', 1],
+            ['WAVETABLE-ESSENTIALS-VIRUSTI--FINALTHUMB.png', 'zeqvn', 2],
+            ['finall2ibraryy.png', 'onoxbb', 3],
+            ['finallibraryy.png', 'paWaK', 4]
          
-         
-        <script type="module">              
-          import { createGumroad } from "../src/scripts2.js";
-          createGumroad('WAVETABLE-ESSENTIALS-FINALTHUMB.png','dtavn','1');
-          createGumroad('WAVETABLE-ESSENTIALS-VIRUSTI--FINALTHUMB.png','zeqvn','2');
-          createGumroad('finall2ibraryy.png','onoxbb','3');
-          createGumroad('finallibraryy.png','paWaK','4');
+          ];      
+          
+          console.table(gumroad_list)
+          gumroad_list.forEach((activity) => {
+            const gumroadList = document.getElementById("container");
+            gumroadList.className = "js-container js-container-dual";
+            let createGumroadDiv = document.createElement("div");
+  
+            createGumroadDiv.id = activity[2];
+            createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
+  
+            gumroadList.appendChild(createGumroadDiv);
+        //    console.table(activity);
+        
+            document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
+              <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+              
+          });
+          
+          //import { createGumroad } from "../src/scripts2.js";
+        
         </script>
-      </div>
+    
       </div>
     </main>
   </body>

@@ -1,12 +1,12 @@
-export function createGumroad(image, url, idtarget) {
+export function createGumroad(idtarget, image, url ) {
   const gumroad = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${image}"/>
   <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${url}">Buy on</a></div>`;
+  console.log(gumroad);
   return (document.getElementById(idtarget).innerHTML = gumroad);
 }
 
-export function createBandcamp(bancamplink, album, album_id, idtarget) {
-  const bandcamp = `<iframe class="iframe_main" src="https://bandcamp.com/EmbeddedPlayer/album=${album_id}/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/" seamless>
-  <a href="${bancamplink}}"> ${album} by Frantic Noise</a></iframe>`
+export function createBandcamp(album_id, idtarget) {
+  const bandcamp = `<iframe class="iframe_main" src="https://bandcamp.com/EmbeddedPlayer/album=${album_id}/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/" seamless></iframe>`
   return (document.getElementById(idtarget).innerHTML = bandcamp);
 }
 

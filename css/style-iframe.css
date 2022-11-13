@@ -14,3 +14,51 @@
   background-color: rgb(187, 76, 150, 0.55);
 }
 body { overflow-x:hidden }
+
+.js-container { 
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 0px solid rgb(75, 44, 44);
+  
+ 
+}
+.js-container-dual { display: flex;flex-direction:unset; justify-content: space-evenly; width: 100% }
+.js-cell {
+
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+
+  
+  display: table-cell;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align-last: center;
+  border: 0px solid #fff;
+
+}
+.js-cellbandcamp {
+
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  width: 43%;
+  border:0px solid white;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align-last: center;
+  
+
+}
+.js-cell-gumroad { width:35%; padding: 10px 0px 20px 0px }
