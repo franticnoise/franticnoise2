@@ -472,3 +472,13 @@ h2 a {
   padding: 0px;
   align-self: center;
 }
+.infotext {
+  margin-top: 00px;
+  margin-left: 80px;
+  font-weight: 600;
+  width: 80%;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}

@@ -13,7 +13,7 @@ export function createIframe(url) {
     'style="width:800px;border:none;overflow:hidden;padding-top:10px"';
   const auto_height =
     "javascript:(function(o){o.style.height=(window.innerHeight - 350) +'px';}(this));";
-  const iframe_code = `<iframe src="${url}" onload="${auto_height}" ${styles}></iframe>`;
+  const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
   return (document.getElementById("ifram1e").innerHTML = iframe_code);
 }
 
