@@ -54,10 +54,18 @@ document.getElementById("footer").innerHTML =
   "</div>";
 
   export function createIframe(url) {
-    const styles =
-      'class="iframemain"';
+
+    let offsetHeight = 340;
+    if(window.innerWidth < 768) {    
+      offsetHeight = 260;
+    }
+    console.log('offset: ' + offsetHeight);
+    console.log('outerHeight: ' + window.outerHeight);
+    const offsetFinal = window.outerHeight - offsetHeight;
+    console.log('calc:' + offsetFinal);
+    const styles = 'class="iframemain"';
     const auto_height =
-      "javascript:(function(o){o.style.height=(window.outerHeight - 450) +'px';}(this));";
+      `javascript:(function(o){o.style.height=${offsetFinal} +'px';}(this));`;
     const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
     return (document.getElementById("ifram1e").innerHTML = iframe_code);
   }
