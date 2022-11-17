@@ -112,7 +112,7 @@ h1 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -141,14 +141,15 @@ h1 {
   
 }
 
-.dropdown ul li a {
+.dropdown ul li a span {
   display: flex;
   padding: 16px 20px;
   height: 50px;
   color: #adadad;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   align-items: center;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -207,7 +208,7 @@ h1 {
 
 .dropdown.dropdown_mobile ul li a {
   justify-content: center;
-  padding: 16px 28px;
+  
 }
 
 .dropdown.dropdown_mobile .icon {
@@ -330,6 +331,7 @@ h1 {
   border: #000;
   border-style: solid;
   border-width: 0px;
+  width:200px;
 }
 
 .mainiframe {
@@ -358,10 +360,10 @@ h2 a {
 
 .iframemain {
   width:100%; 
-  border-radius: 20px;
+  border-radius: 10px;
   border:none;
   overflow:hidden;
-  padding-top:10px;
+  margin-top:10px;
   border: 1px solid rgb(0, 0, 0, 0.25);  
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
@@ -372,6 +374,7 @@ h2 a {
 .navigation_flex div { margin:4px;}
 
 @media (min-width: 768px) {
+  .franticlogo { width:300px; }
   .navigation_flex { 
     display: flex;
   }

@@ -1,21 +1,4 @@
-export function createHead() {
-  return (document.getElementById("head").innerHTML =
-    "<title>Frantic Noise</title>" +
-    '<meta charset="UTF-8" />' +
-    '<meta name="viewport" content="width=device-width" />' +
-    '<script src="https://gumroad.com/js/gumroad.js"></script>' +
-    '<link rel="stylesheet" href="css/styles.css" />' +
-    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>' +
-    '<link rel="stylesheet" href="css/style-iframe.css" />');
-}
-export function createIframe(url) {
-  const styles =
-    'class="iframemain"';
-  const auto_height =
-    "javascript:(function(o){o.style.height=(window.innerHeight - 350) +'px';}(this));";
-  const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
-  return (document.getElementById("ifram1e").innerHTML = iframe_code);
-}
+
 /////////// NAVIGATION MENU
 
 var btn_1 = document.querySelector(".dropdown_desktop_icon button");
@@ -54,7 +37,7 @@ window.addEventListener("click", function (event) {
 
 /////// CREATE HEADER
 
-document.getElementById("header").innerHTML = '<img class="franticlogo" src="img/FRANTIC-NOISE-LOGO.png" width="300"/>';
+document.getElementById("header").innerHTML = '<img class="franticlogo" src="img/FRANTIC-NOISE-LOGO.png"/>';
 //  '<div class="headerparent">' +
 //  '        <div class="headerchild">' +
 //  '          <img class="franticlogo" src="img/FRANTIC-NOISE-LOGO.png" width="300"/>' 
@@ -69,3 +52,12 @@ document.getElementById("footer").innerHTML =
   "<div id='footer'><br>" +
   " All rights reserved www.franticnoise.com 2022  " +
   "</div>";
+
+  export function createIframe(url) {
+    const styles =
+      'class="iframemain"';
+    const auto_height =
+      "javascript:(function(o){o.style.height=(window.innerHeight - 350) +'px';}(this));";
+    const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
+    return (document.getElementById("ifram1e").innerHTML = iframe_code);
+  }
