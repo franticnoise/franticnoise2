@@ -57,7 +57,7 @@ document.getElementById("footer").innerHTML =
     const styles =
       'class="iframemain"';
     const auto_height =
-      "javascript:(function(o){o.style.height=(window.innerHeight - 350) +'px';}(this));";
+      "javascript:(function(o){o.style.height=(window.outerHeight - 450) +'px';}(this));";
     const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
     return (document.getElementById("ifram1e").innerHTML = iframe_code);
   }
