@@ -192,6 +192,9 @@ h1 {
 .dropdown.dropdown_desktop .icon {
   display: none;
 }
+.dropdown.dropdown_desktop_icon ul {
+ width: 160px;
+}
 .dropdown.dropdown_desktop .text {
   justify-content: center;
   text-align: center;
@@ -383,7 +386,9 @@ h2 a {
     width: 225px;}
   .dropdown img { display:block;}
   .dropdown button { width: 225px; }
-
+  .dropdown.dropdown_desktop_icon ul {
+    width: 225px;
+   }
   .franticlogo { width:300px; }
   .navigation_flex { 
     display: flex;

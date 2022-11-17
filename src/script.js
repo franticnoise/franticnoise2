@@ -59,13 +59,11 @@ document.getElementById("footer").innerHTML =
     if(window.innerWidth < 768) {    
       offsetHeight = 260;
     }
-    console.log('offset: ' + offsetHeight);
-    console.log('outerHeight: ' + window.outerHeight);
-    const offsetFinal = window.outerHeight - offsetHeight;
-    console.log('calc:' + offsetFinal);
-    const styles = 'class="iframemain"';
+
+    const offsetFinal = window.innerHeight - offsetHeight;
+
     const auto_height =
       `javascript:(function(o){o.style.height=${offsetFinal} +'px';}(this));`;
-    const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
+    const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" class="iframemain"></iframe>`;
     return (document.getElementById("ifram1e").innerHTML = iframe_code);
   }

@@ -121,7 +121,7 @@ body { overflow-x:hidden;background: transparent;}
     width: 80%;
     font-size: 18px;    
   } 
-  .infotext3 { font-size: 18px;}
+  .infotext3 { font-size: 18px;margin-top:15px}
   .maincontainer {
     margin-top:0px;
     padding-left: 60px;
