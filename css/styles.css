@@ -448,7 +448,8 @@ h2 a {
   border:none;
   overflow:hidden;
   padding-top:10px;
-  resize:both;
+  border: 1px solid rgb(0, 0, 0, 0.25);  
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 .cropped img {
   transform: scale(1.35);
