@@ -103,7 +103,7 @@ body { overflow-x:hidden;background: transparent;}
   text-shadow: 2px 2px 1px rgb(0, 0, 0);
 } 
 #cell { display: flex;flex-direction: column; gap: 4px;}
-.iframe_props { width: 100%;}
+.iframe_props { width: 90%;}
 .gumroad-button .logo-full { font-size:11px;}
 .gumroad-button span { display:none }
 @media (min-width: 768px) {

@@ -11,7 +11,7 @@ export function createBandcamp(album_id, idtarget) {
 }
 
 export function createYoutube(video_link, idtarget ) {
-  const youtube =  `<iframe height="342" src="https://www.youtube.com/embed/${video_link}?controls=0"
+  const youtube =  `<iframe src="https://www.youtube.com/embed/${video_link}?controls=0"
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     style="border-radius:18px" class="iframe_props" allowfullscreen></iframe>`
     return (document.getElementById(idtarget).innerHTML = youtube);
