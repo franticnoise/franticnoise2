@@ -13,7 +13,7 @@
   border-radius: 5px;
   background-color: rgb(187, 76, 150, 0.55);
 }
-body { overflow-x:hidden;background: rgba(13, 13, 13, 0.10);}
+body { overflow-x:hidden;background: transparent;}
 
 
 
@@ -107,6 +107,7 @@ body { overflow-x:hidden;background: rgba(13, 13, 13, 0.10);}
 .gumroad-button .logo-full { font-size:11px;}
 .gumroad-button span { display:none }
 @media (min-width: 768px) {
+  body { overflow-x:hidden;background: rgba(13, 13, 13, 0.10);}
   .gumroadimg__landing {  
 
     width: 620px;
