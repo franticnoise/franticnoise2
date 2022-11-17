@@ -10,14 +10,13 @@
   </head>
  
   <body style="background-color: transparent">
-    <main style="margin-left:0px;">
-     
-      <p  class="infotext">
+    <main>
+        <p  class="infotext">
         This is some ideas i've been playing around in my free time.
         Let me know about if you have suggestions, they are are very welcome =)
       </p>
-      <div class="mainlandingparent">
-        <div id="container">
+      
+        <div id="container" class="maincontainer">
          
 
        
@@ -40,8 +39,8 @@
               gumroadList.appendChild(createGumroadDiv);
               console.table(activity);
           
-              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${activity[0]}"/>
-                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
+                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
               
               
             });            

@@ -10,14 +10,13 @@ export function createHead() {
 }
 export function createIframe(url) {
   const styles =
-    'style="width:800px;border:none;overflow:hidden;padding-top:10px"';
+    'class="iframemain"';
   const auto_height =
     "javascript:(function(o){o.style.height=(window.innerHeight - 350) +'px';}(this));";
   const iframe_code = `<iframe src="templates/${url}" onload="${auto_height}" ${styles}></iframe>`;
   return (document.getElementById("ifram1e").innerHTML = iframe_code);
 }
-
-
+/////////// NAVIGATION MENU
 
 var btn_1 = document.querySelector(".dropdown_desktop_icon button");
 var btn_2 = document.querySelector(".dropdown_desktop button");
@@ -53,6 +52,8 @@ window.addEventListener("click", function (event) {
   }
 });
 
+/////// CREATE HEADER
+
 document.getElementById("header").innerHTML =
   '<div class="headerparent">' +
   '        <div class="headerchild">' +
@@ -62,8 +63,9 @@ document.getElementById("header").innerHTML =
   "      </div>" +
   "    </div>";
 
+/////// CREATE FOOTER
+
 document.getElementById("footer").innerHTML =
   "<div id='footer'><br>" +
   " All rights reserved www.franticnoise.com 2022  " +
   "</div>";
-

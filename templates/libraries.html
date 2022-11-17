@@ -3,7 +3,7 @@
 <head>
   <title>Frantic Noise</title>
   <meta charset=UTF-8><meta name=viewport content=width=device-width>
-  <script src="https://gumroad.com/js/gumroad.js"></script>
+ 
   <link rel="stylesheet" href="../css/styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css/">
   <link rel="stylesheet" href="../css/style-iframe.css" />
@@ -16,12 +16,21 @@
         <p class="infotext" >
         Dive into a vast library of psychedelic sounds with our collection of carefully crafted samples and premium wavetables. <br>
       </p> </h3>
-      <iframe width="608" height="342" src="https://www.youtube.com/embed/JyS-DUehBeQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border-radius:18px;" allowfullscreen></iframe>
+      <iframe height="342" src="https://www.youtube.com/embed/JyS-DUehBeQ?controls=0" title="YouTube video player" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      style="border-radius:18px" class="iframe_props" allowfullscreen></iframe>
         
         <div id="container" style="width: 100%;">
       
   
         <script type="module">    
+          {
+            const script = document.createElement("script");
+            script.src = "https://assets.gumroad.com/packs/js/overlay-499efd442e6f54649ee6.js";
+            script.charset = "utf-8";
+            document.head.appendChild(script);
+              document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
+          }
           let gumroad_list = [
             ['WAVETABLE-ESSENTIALS-FINALTHUMB.png', 'dtavn', 1],
             ['WAVETABLE-ESSENTIALS-VIRUSTI--FINALTHUMB.png', 'zeqvn', 2],
@@ -43,7 +52,7 @@
         //    console.table(activity);
         
             document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
-              <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+              <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
               
           });
           

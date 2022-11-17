@@ -1,5 +1,5 @@
 document.getElementById('myNav').innerHTML =
-  "<div class='dropdown dropdown_desktop'>" +
+  "<div class='navigation_flex'><div class='dropdown dropdown_desktop'>" +
   '  <button>' +
   '    <span class=icon><ion-icon name=heart></ion-icon></span>' +
   '    <img src=svgs/speaker2.svg width=25><span class=text>&nbsp;MUSIC</span>' +
@@ -37,4 +37,4 @@ document.getElementById('myNav').innerHTML =
   '    <li><a href=http://www.twitch.com/franticnoise target=_blank><span class=text>Twitch</span></a></li>' +
   '    <li><a href=https://discord.gg/mkzpR8NgxR target=_blank><span class=text>Discord</span></a></li>' +
   '  </ul>' +
-  '</div>';
+  '</div></div>';

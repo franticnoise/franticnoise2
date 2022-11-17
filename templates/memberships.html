@@ -10,8 +10,8 @@
    
   </head>
   
-  <body style="background-color: transparent">
-    <main style="width: 100%; text-align: center">
+  <body>
+    <main>
       
       <p class="infotext" >
         Get streaming access to 120+ hours of recorded courses & workshops thru
@@ -20,7 +20,7 @@
       </p>
 
       
-        <div id="container" >          
+        <div id="container" class="maincontainer">          
             
             <script type="module">  
               let gumroad_list = [
@@ -40,8 +40,8 @@
                 gumroadList.appendChild(createGumroadDiv);
                 console.table(activity);
             
-                document.getElementById(activity[2]).innerHTML = `<div id="cell"><img style="width: 240px" class="gumroadimg" src="../img/${activity[0]}"/>
-                  <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}">Buy on</a></div>`;
+                document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
+                  <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
                 
                 //createGumroad(activity[2], activity[0], activity[1]);
               });            
@@ -53,20 +53,9 @@
         
         
       
-      <p
-        style="
-          margin-top: 00px;
-          font-weight: 600;
-          font-size: 14px;
-          color: #ffffff;
-          margin-bottom: 20px;
-        "
-      >
-        Read one short class review by one of my students:<br />
-        <img
-          src="../img/147197028_141610631127819_7386312210166532991_n.jpg"
-          style="width: 500px"
-        />
+      <p class="infotext">
+        One short review from one of my students:<br />
+        <img class="gumroadimg" src="../img/147197028_141610631127819_7386312210166532991_n.jpg"/>
       </p></div>
     </main>
   </body>

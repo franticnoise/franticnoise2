@@ -3,7 +3,7 @@
   <head>
     <title>Frantic Noise</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=1" />
+    <meta name="viewport" content="width=device-width, height=device-height" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/styles.css" />
@@ -11,52 +11,48 @@
     <link rel="icon" type="image/png" href="img/tab.webp"/>
     
     <script type="module" src="src/menu.js"></script>
+    <script type="module">
+      const queryString = window.location.search;
+
+      const urlParams = new URLSearchParams(queryString);
+
+      import { createIframe } from "./src/script.js";
+
+      if (urlParams.has('page') === true)  {
+        createIframe(urlParams.get('page') + '.html');
+      } else {
+        createIframe("landing.html");
+      }  
+     
+    </script>
     <script src="src/vanta/three.min.js"></script>
     <script src="src/vanta/vanta.net.min.js"></script>
     <script type="module" src="src/script.js"></script>
-
-
   </head>
-<html >
+<html>
     
-    <body style="width:100%; ">
+    <body>
+      <div class="mainlandingparent">
         <div id="container" style="width:100%;max-height:100%;">
         
             <div id="header" class="header"></div>
             <div id="myNav" class="wrapper"></div>
             <div id="ifram1e" class="wrapper"></div>
-            <div id="footer" class="footer"></div>
-           
-            <script type="module">
-              
-              const queryString = window.location.search;
-            
-              const urlParams = new URLSearchParams(queryString);
-              import { createIframe } from "./src/script.js";
-              const render_page = ''
-              if (urlParams.has('page') === true)  {
-                createIframe(urlParams.get('page') + '.html');
-              } else {
-                createIframe("landing.html");
-              }  
-              
-               
-             
-            </script>
-       
+            <div id="footer" class="footer"></div>   
         </div>
+      </div>
     </body>
    
 </html>
 
 <script> 
   VANTA.NET({
-    el: 'html',
+    el: 'body',
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 1396.0,
-    minWidth: 820.0,
+    minHeight: 1396,
+    minWidth: 275.0,
     scale: 1.0,
     scaleMobile: 1.0,
   });
