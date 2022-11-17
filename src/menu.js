@@ -27,7 +27,7 @@ document.getElementById('myNav').innerHTML =
   '</div>' +
   "<div class='dropdown dropdown_mobile'>" +
   '  <button>' +
-  "    <img src=svgs/links2.svg width=25><span class='text'>&nbsp;SOCIALMEDIA</span>" +
+  "    <img src=svgs/links2.svg width=25><span class='text'>&nbsp;SOCIAL</span>" +
   '  </button>' +
   '  <ul>' +
   '    <li><a href=http://www.instagram.com/franticnoise target=_blank><span class=text>Instagram</span></a></li>' +
