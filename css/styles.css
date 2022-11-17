@@ -163,7 +163,7 @@ h1 {
 }
 
 
-.dropdown ul li a:hover {
+.dropdown ul li a span:hover {
   background: #cfcfcf;
   color: #808080;
 }
