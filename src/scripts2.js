@@ -6,7 +6,7 @@ export function createGumroad(idtarget, image, url ) {
 }
 
 export function createBandcamp(album_id, idtarget) {
-  const bandcamp = `<iframe class="iframe_main" src="https://bandcamp.com/EmbeddedPlayer/album=${album_id}/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/" seamless></iframe>`
+  const bandcamp = `<iframe class="iframe_bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=${album_id}/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/" seamless></iframe>`
   return (document.getElementById(idtarget).innerHTML = bandcamp);
 }
 

@@ -31,27 +31,6 @@ body {
 
 }
 
-.card1 { 
-  background-color: #3a4285;
-  background-image: linear-gradient(to bottom right, #3a4285, #aa5fb0);
-  border-radius: 9px;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-  box-shadow: 2px 2px 10px rgb(0, 0, 0);
-  width:670px;
-  border:1px solid #000000;
-  align-self: center;
-  
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-left:0px; padding-right: 0px;
-  padding-bottom: 0px;
-  margin-left:40px;
-  
-
-}
-.card1 img { width:300px;border:1px solid #000000;margin:5px;border-radius:9px;box-shadow: 2px 2px 10px rgb(0, 0, 0);  }
-.card1 p { font-weight:bold;font-size:14px; color:#fff; margin-bottom:14px;padding-bottom:14px;color:#ffff}
-.card1 a {  color: #aa5fb0;text-shadow: 2px 2px 4px rgb(0, 0, 0); }
 
 nav {
   display: flex;
@@ -81,7 +60,7 @@ nav a[aria-current='page'] {
 }
 
 main {
-  border: #000;
+ 
   border-width: 0px;
   border-style: solid;
   padding: 1rem;
@@ -252,21 +231,6 @@ h1 {
   border: 0px solid #ffffff;
 }
 
-.Mainlanding {
-  border-width: 5px;
-  border: #35012e;
-  border-style: solid;
-  background-color: #ffffff;
-  font-size: 10px;
-  padding: 20px;
-  margin-top: 50px;
-  width: 200px;
-  position: absolute;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 .gumroadimg {
   width: 100%;
   margin: 0px;
@@ -282,20 +246,6 @@ h1 {
   border-bottom-right-radius: 10px;
 }
 
-.gumroadimg2 {
-  width: 100%;
-  margin: 20px;
-  margin-top: 0px;
-  padding: 10px;
-  border: black;
-  border-style: solid;
-  border-width: 0px;
-  align-self: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 .Gumroad {
   font-size: 10px;
   padding: 10px;
@@ -311,6 +261,7 @@ h1 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .gumroad-button {
   text-align: center;
   align-self: center;
@@ -328,8 +279,6 @@ h1 {
   justify-content: center;
 }
 
-
-
 #row {
   display: table-row;
   text-align: center;
@@ -339,7 +288,7 @@ h1 {
 
 
 .h3 { padding:0px;margin:0px}
-.iframe_main {border: 2px solid #000; width: 100%; height: 100%; border-radius: 4px; box-shadow: 4px 4px 10px #000;}
+.iframe_bandcamp {border: 2px solid #000; width: 100%; height: 100%; border-radius: 4px; box-shadow: 4px 4px 10px #000;}
 .iframe_video {border: 2px solid #000; border-radius: 10px; box-shadow: 4px 4px 10px #000; }
 .iframe_souncloud { border: 4px solid #000; border-radius: 10px; box-shadow: 4px 4px 10px #000;}
 
@@ -376,40 +325,13 @@ h1 {
 
 .franticlogo {
   align-self: center;
- 
   justify-content: center;
   align-items: center;
   border: #000;
   border-style: solid;
   border-width: 0px;
-}
-.headerparent {
-  display: flex;
-  border: #000;
-  border-style: solid;
-  border-width: 0px;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-}
-.headerchild {
-  font-weight: bolder;
-  color: white;
-  font-size: 20px;
-  border: #000;
-  margin-bottom: 0px;
-  text-shadow: 4px 4px 4px #000000;
 }
 
-.headermainiframecontainer {
-  border:0px solid #000;
-  width: 100%;
-   text-align: center;
-  align-items: center;
-  justify-content: center
-}
 .mainiframe {
   background-color: none;
   margin-top: 20px;
@@ -433,15 +355,7 @@ h2 a {
   font-size:17px;font-weight: bold; text-shadow: 11px 5px 10px #313131;color:rgb(219, 51, 135)
 
 }
-.cropped {
-  width: 300px; /* width of container */
-  height: 300px; /* height of container */
-  overflow: hidden;
-  border: 0px solid black;
-  border:3px solid #000000;
-  border-radius: 5px;
-  margin-bottom:21px;
-}
+
 .iframemain {
   width:100%; 
   border-radius: 20px;
@@ -450,14 +364,6 @@ h2 a {
   padding-top:10px;
   border: 1px solid rgb(0, 0, 0, 0.25);  
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
-.cropped img {
-  transform: scale(1.35);
-  margin: -15px 0px 0px -0px;
-  padding-right:40px;
-  
-  padding: 0px;
-  align-self: center;
 }
 
 .navigation_flex { 
@@ -470,6 +376,6 @@ h2 a {
     display: flex;
   }
   .iframemain { width: 800px;}
-  .iframe_main { width: 300px; height: 300px; max-width: 800px;}
+  .iframe_bandcamp { width: 300px; height: 300px; max-width: 800px;}
  
 }
