@@ -13,7 +13,7 @@
   border-radius: 5px;
   background-color: rgb(187, 76, 150, 0.55);
 }
-body { overflow-x:hidden;background-color: transparent;}
+body { overflow-x:hidden;background: rgba(13, 13, 13, 0.10);}
 
 
 
