@@ -34,3 +34,39 @@ export function createHead(pagename) {
 
     return document.getElementById("head").innerHTML = headinfo
 }
+
+////////////// GUMROAD JSON PARSE 
+
+
+const script = document.createElement("script");
+script.src = "https://assets.gumroad.com/packs/js/overlay-499efd442e6f54649ee6.js";
+script.charset = "utf-8";
+document.head.appendChild(script);
+document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
+
+
+export async function loadJson(section) {
+
+
+  const res = await fetch("../src/gumroad.json");
+  const json = await res.json();
+
+  let gid = 1;
+  for (let i = 0; i < json.gumroad.length; i++) {
+    if (json.gumroad[i].cat === section) {
+      const gumroadList = document.getElementById("container");
+      gumroadList.className = "js-container js-container-dual";
+      let createGumroadDiv = document.createElement("div");
+
+      createGumroadDiv.id = gid;
+      createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
+
+      gumroadList.appendChild(createGumroadDiv);
+      
+      document.getElementById(gid).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${json.gumroad[i].img}"/>
+      <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${json.gumroad[i].code}"><span>Buy on</span></a></div>`;
+      console.log(  json.gumroad[i].cat,json.gumroad[i].img,json.gumroad[i].code,gid);
+      gid++;
+    }
+  }
+}

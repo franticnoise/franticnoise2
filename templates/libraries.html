@@ -24,40 +24,9 @@
       
   
         <script type="module">    
-          {
-            const script = document.createElement("script");
-            script.src = "https://assets.gumroad.com/packs/js/overlay-499efd442e6f54649ee6.js";
-            script.charset = "utf-8";
-            document.head.appendChild(script);
-              document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
-          }
-          let gumroad_list = [
-            ['WAVETABLE-ESSENTIALS-FINALTHUMB.png', 'dtavn', 1],
-            ['WAVETABLE-ESSENTIALS-VIRUSTI--FINALTHUMB.png', 'zeqvn', 2],
-            ['finall2ibraryy.png', 'onoxbb', 3],
-            ['finallibraryy.png', 'paWaK', 4]
          
-          ];      
-          
-          console.table(gumroad_list)
-          gumroad_list.forEach((activity) => {
-            const gumroadList = document.getElementById("container");
-            gumroadList.className = "js-container js-container-dual";
-            let createGumroadDiv = document.createElement("div");
-  
-            createGumroadDiv.id = activity[2];
-            createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
-  
-            gumroadList.appendChild(createGumroadDiv);
-        //    console.table(activity);
-        
-            document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
-              <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
-              
-          });
-          
-          //import { createGumroad } from "../src/scripts2.js";
-        
+          import { loadJson } from "../src/scripts2.js";
+          loadJson("libraries");
         </script>
     
       </div>

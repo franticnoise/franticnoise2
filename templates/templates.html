@@ -4,60 +4,26 @@
     <title>Frantic Noise</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <script src="https://gumroad.com/js/gumroad.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/style-iframe.css" />
   </head>
 
-  
   <body>
     <main>
+      <p class="infotext">
+        Templates are a perfect place to start from in your next hitech
+        psytrance music session. When starting a new track I find a lot of value
+        in eliminating some variables (such as the arrangement of percussion and
+        basslines for example) in order to focus only on making legendary level
+        sound design. <br />
+      </p>
 
-        <p class="infotext">
-          Templates are a perfect place to start from in your next  hitech psytrance music session. When starting a new track I find a lot of value in eliminating some variables 
-          (such as the arrangement of percussion and basslines for example) in order to focus only on making legendary level sound design. <br>
-        </p>
-          
-          <div id="container" class="maincontainer">
-
-            <script type="module">           
-            // import { createGumroad } from "../src/scripts2.js";
-
-            //  const gumroad_file = '../src/gumroad.json'; 
-            //  const gumroad_json = JSON.parse(gumroad_file);
-      
-          
-         
-           let gumroad_list = [
-              ['TEMPLATE-FINALTHUMB1000PX.png', 'cglsrv', 1],
-              ['TEMPLATESFINALTHUMB1000PX2.png', 'ufeld', 2],
-              ['TEMPLATESFINALTHUMB1000PX.png', 'JWJID', 3],
-              ['KICK&BASs.png', 'yHIsbg', 4],
-              ['stRANGERTHINGS-THUMB.png', 'BAtKX', 5],
-              ['NASA2REMIXPACK.png', 'pclig', 6],
-              ['flamingfreddyremixpack.png', 'pclig', 7] 
-            ];      
-            
-            console.table(gumroad_list)
-            gumroad_list.forEach((activity) => {
-              const gumroadList = document.getElementById("container");
-              gumroadList.className = "js-container js-container-dual";
-              let createGumroadDiv = document.createElement("div");
-    
-              createGumroadDiv.id = activity[2];
-              createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
-    
-              gumroadList.appendChild(createGumroadDiv);
-          //    console.table(activity);
-          
-              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
-                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
-                
-            }); 
-          
-            </script>
-        
-          </div>
+      <div id="container" class="maincontainer">
+        <script type="module">
+          import { loadJson } from "../src/scripts2.js";
+          loadJson("templates");
+        </script>
+      </div>
     </main>
   </body>
 </html>

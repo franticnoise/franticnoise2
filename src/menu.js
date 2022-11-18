@@ -19,6 +19,7 @@ document.getElementById('myNav').innerHTML =
   '  <ul>' +
   '    <li><a href=index.html?page=presets><span class=text>Synth Presets</span></a></li>' +
   '    <li><a href=index.html?page=libraries><span class=text>Libraries &  Wavetables</span></a></li>' +
+  '    <li><a href=index.html?page=instrumentracks><span class=text>Instrument Racks</span></a></li>' +
   '    <li><a href=index.html?page=templates><span class=text>RMX Packs & Templates</span></a></li>' +
   '    <li><a href=index.html?page=maxforlive><span class=text>Max for Live Devices</span></a></li>' +
   "    <li><a href=index.html?page=courses><span class='text'>Courses & Webinars</span></a></li>" +

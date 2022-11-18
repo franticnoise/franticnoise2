@@ -4,7 +4,6 @@
     <title>Frantic Noise</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-  
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/style-iframe.css" />
   </head>
@@ -21,39 +20,8 @@
       <div class="mainlandingparent">
         <div id="container">
          <script type="module">              
-            {
-              const script = document.createElement("script");
-              script.src = "https://assets.gumroad.com/packs/js/overlay-499efd442e6f54649ee6.js";
-              script.charset = "utf-8";
-              document.head.appendChild(script);
-                document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
-            }
-           // import { createGumroad } from "../src/scripts2.js";
-            let gumroad_list = [
-              ['courses.png', 'dbVoFX', 1],
-              ['FINALTHUMB1000PX-MULTIPLE.png', 'uzwjxu', 2]
-            ];      
-            
-            console.table(gumroad_list)
-            gumroad_list.forEach((activity) => {
-              const gumroadList = document.getElementById("container");
-              gumroadList.className = "js-container js-container-dual";
-              let createGumroadDiv = document.createElement("div");
-    
-              createGumroadDiv.id = activity[2];
-              createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
-    
-              gumroadList.appendChild(createGumroadDiv);
-              console.table(activity);
-          
-              document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
-                <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
-              
-              
-            });            
-
-            //createGumroad('courses.png','dbVoFX','1');
-            //createGumroad('FINALTHUMB1000PX-MULTIPLE.png','uzwjxu','2');
+          import { loadJson } from "../src/scripts2.js";
+          loadJson("courses");
           </script>
           </div>
         </div>

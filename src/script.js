@@ -35,6 +35,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
+
 /////// CREATE HEADER
 
 document.getElementById("header").innerHTML = '<img class="franticlogo" src="img/FRANTIC-NOISE-LOGO.png"/>';

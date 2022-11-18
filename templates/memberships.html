@@ -4,7 +4,6 @@
     <title>Frantic Noise</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <script src="https://gumroad.com/js/gumroad.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/style-iframe.css" />
    
@@ -18,40 +17,14 @@
         my gumroad Memberships plus other benefits like monthly presets and
         mastering services! :)
       </p>
-
       
-        <div id="container" class="maincontainer">          
-            
+        <div id="container" class="maincontainer">                      
             <script type="module">  
-              let gumroad_list = [
-                ['GOLDMEMBERSHIPSQUARE2.png', 'xAmTU', 1],
-                ['SILVERMEMBERSHIPSQUARE2.png', 'HMMSm', 2]
-              ];      
-              
-              console.table(gumroad_list)
-              gumroad_list.forEach((activity) => {
-                const gumroadList = document.getElementById("container");
-                gumroadList.className = "js-container js-container-dual";
-                let createGumroadDiv = document.createElement("div");
-      
-                createGumroadDiv.id = activity[2];
-                createGumroadDiv.className = "js-cellbandcamp js-cell-gumroad";
-      
-                gumroadList.appendChild(createGumroadDiv);
-                console.table(activity);
-            
-                document.getElementById(activity[2]).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${activity[0]}"/>
-                  <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${activity[1]}"><span>Buy on</span></a></div>`;
-                
-                //createGumroad(activity[2], activity[0], activity[1]);
-              });            
-              //import { createGumroad } from "../src/scripts2.js";
-              //createGumroad('GOLDMEMBERSHIPSQUARE2.png','xAmTU','1');
-              //createGumroad('SILVERMEMBERSHIPSQUARE2.png','HMMSm','2');
+              import { loadJson } from "../src/scripts2.js";
+              loadJson("membership");
             </script>
           </div> </div>
-        
-        
+      
       
       <p class="infotext">
         One short review from one of my students:<br />
