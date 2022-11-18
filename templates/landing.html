@@ -31,7 +31,30 @@
           seamless></iframe>        
         </div>
       </div>
-    
+      <div id="soundcloud"></div>
+      <script type="module">
+        let soundcloud_list = [
+          [1368097705, 1],
+         
+        ];
+        import { createSoundcloud } from "../src/scripts2.js";
+
+        soundcloud_list.forEach((activity) => {
+
+          const soundcloudList = document.getElementById("soundcloud");
+          soundcloudList.className = "js-container";
+          let createSoundcloudDiv = document.createElement("div");
+
+          createSoundcloudDiv.id = activity[1];
+          createSoundcloudDiv.className = "js-cell";
+
+          soundcloudList.appendChild(createSoundcloudDiv);
+
+          createSoundcloud(activity[0], activity[1]);
+        });
+
+        //            console.table(soundcloud_list);
+      </script>
         
       <div id="landingrow">
           <div id="cell2_landing" >
