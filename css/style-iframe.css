@@ -173,7 +173,8 @@ span {
   border-radius: 10px;
   
 
-  text-shadow: 2px 2px 1px rgb(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 1px rgb(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.5);
 }
 .form_calc img { 
   width: 20px;
@@ -219,7 +220,7 @@ span {
 }
 .row_result {
   align-self: left;
-  width: 150px;
+  width: 100px;
   padding: 6px;
   background-color: #7a59b8;
   border: 1px solid black;
