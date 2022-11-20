@@ -33,6 +33,48 @@ export function createHead(pagename = '') {
   <link rel="stylesheet" href="../css/style-iframe.css" />`;
   document.getElementById("head").innerHTML = headinfo
 }
+////////////// BPM DELAY MS CALCULATOR
+
+export function calcMs(speed){
+
+  const result = 60000 / speed; 
+  console.log(result);
+  const results = [];
+  results.push(
+    {'res': result * 2, 'math': "1/2"},
+    {'res': result * 1, 'math': "1/4"},
+    {'res': result / 1.5,'math': "1/4t"},
+    {'res': result / 2, 'math': "1/8"},
+    {'res': result / 3, 'math': "1/8t"},
+    {'res': result / 4, 'math': "1/16"},
+    {'res': result / 6, 'math': "1/16t"},
+    {'res': result / 8, 'math': "1/32"},
+    {'res': result / 12, 'math': "1/32t"},
+    {'res': result / 16, 'math': "1/64"});
+  console.table(results)
+
+  const resultsList = document.getElementById("container");
+  
+  for (let i = 0; i < results.length; i++) {
+
+    let createResultRow = document.createElement("div");
+    createResultRow.id = i;
+    createResultRow.className = 'result_div';
+    resultsList.appendChild(createResultRow);    
+    let bgClass = '';
+    if(i % 2 == 0) {bgClass = 'result_bg';}
+
+    let checkResult = results[i].res;
+    if(Math.floor(results[i].res) !== results[i].res) { 
+       checkResult = results[i].res.toFixed(1);
+    } 
+
+    document.getElementById(i).innerHTML = `
+      <div class="row_math ${bgClass}">${results[i].math}</div>
+      <div class="row_result ${bgClass}">${checkResult}ms</div>`;
+    }
+}
+
 
 ////////////// GUMROAD JSON PARSE 
 

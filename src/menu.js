@@ -8,7 +8,8 @@ document.getElementById('myNav').innerHTML =
   '    <li><a href=index.html?page=landing><span class=text>Homepage</span></a></li>' +
   '    <li><a href=index.html?page=bandcamp><span class=text>Released Music</span></a></li>' +
   '    <li><a href=index.html?page=videos><span class=text>Party Videos</span></a></li>' +
-  '    <li><a href=index.html?page=tutorials><span class=text>Video Tutorials</span></a></li>' +
+  '    <li><a href=index.html?page=calculator><span class=text>BPM Calculator</span></a></li>' +
+  '    <li><a href=index.html?page=tutorials><span class=text>Music Tutorials</span></a></li>' +
   '    <li><a href=index.html?page=soundcloud><span class=text>Soundcloud</span></a></li>' +
   ' </ul>' +
   '</div>' +

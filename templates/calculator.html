@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head" />
+ 
+  <body>
+    <main> 
+      <p class="infotext"> BPM Millisecond Calculator<br>
+        <small>Having the right value to the millisecond (literally) is very helpful when calculating timings on delay effects, drum lenghts,  
+          envelope design, etc</p>
+        </small>
+      <div class="infotext" style="margin-bottom: 20px;; "> 
+       
+      
+      <form class="form_calc" onSubmit="">          
+        <span>BPM</span>
+        <div class="form_calc2">
+          <img id="less" src="../svgs/minus-svgrepo-com.svg">
+          <input type="text" id="bpms" value="150" autofocus > 
+          <img id="more" type="button" src="../svgs/plus-svgrepo-com.svg">
+        </div>
+
+        
+        <button type="submit" id="submit" >Calculate</button>
+      
+        </form>
+      </div>
+
+      <div id="container" class="calculator">
+       
+      </div>
+   </main>
+  </body>
+</html>
+<script type="module">    
+                    
+  createHead('BPM Delay Millisecond Calculator')
+  import { createHead, calcMs } from "../src/scripts2.js";
+  
+ 
+  calcMs(document.getElementById('bpms').value);
+
+  document.getElementById("more").addEventListener("click", function(event){
+    const bpm_calc = +document.getElementById('bpms').value + 1;
+    document.getElementById('bpms').value = bpm_calc;
+    event.preventDefault()
+    calcMs(bpm_calc);
+  });
+
+  document.getElementById("less").addEventListener("click", function(event){
+    const bpm_calc = +document.getElementById('bpms').value - 1;
+    document.getElementById('bpms').value = bpm_calc;
+    event.preventDefault()
+    calcMs(bpm_calc);
+  });
+
+  document.getElementById("submit").addEventListener("click", function(event){
+    const bpm_calc = document.getElementById('bpms').value 
+    event.preventDefault()
+    calcMs(bpm_calc);
+  });
+</script>
