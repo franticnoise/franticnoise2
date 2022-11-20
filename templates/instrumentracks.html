@@ -5,12 +5,18 @@
   <body>
     <main>
       <p class="infotext">
-      Ableton Live Instrument & Audio Effect Racks
+        <img class="gumroadimg" style="max-width:700px"  
+        src="../img/Ableton-Live-Instrument-Rack.png" /><br>
+        
+      Instrument & Audio Effect Racks are sounds and effects ready to be dropped 
+      in your Ableton Live projects. 
       </p>
       <div class="mainlandingparent">
         <div id="container">
          <script type="module">              
-          import { loadJson, gumroadScripts } from "../src/scripts2.js";
+          import { loadJson, gumroadScripts, createHead } from "../src/scripts2.js";
+          
+          createHead();
           gumroadScripts();
           loadJson("instrumentracks");
           </script>
