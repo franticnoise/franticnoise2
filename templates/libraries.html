@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Frantic Noise</title>
-  <meta charset=UTF-8><meta name=viewport content=width=device-width>
- 
-  <link rel="stylesheet" href="../css/styles.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css/">
-  <link rel="stylesheet" href="../css/style-iframe.css" />
-</head>
- 
-
+  <head id="head" />
+  
   <body>
     <main>
-      <h3 class="animate__animated animate__backInDown animate__delay-0s ">
-        <p class="infotext" >
-        Dive into a vast library of psychedelic sounds with our collection of carefully crafted samples and premium wavetables. <br>
-      </p> </h3>
-      <iframe height="342" src="https://www.youtube.com/embed/JyS-DUehBeQ?controls=0" title="YouTube video player" 
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      style="border-radius:18px" class="iframe_props" allowfullscreen></iframe>
-        
-        <div id="container" style="width: 100%;">
-      
-  
-        <script type="module">    
-          import { loadJson, gumroadScripts } from "../src/scripts2.js";
+      <p class="infotext">
+        Dive into a vast library of psychedelic sounds with our collection of
+        carefully crafted samples and premium wavetables. <br />
+      </p>
+      <iframe
+        height="342"
+        src="https://www.youtube.com/embed/JyS-DUehBeQ?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"        
+        class="iframe_props"
+        allowfullscreen
+      ></iframe>
+
+      <div id="container" style="width: 100%">
+        <script type="module">
+          import { loadJson, gumroadScripts, createHead } from "../src/scripts2.js";
+          createHead('Sound Libraries');          
           gumroadScripts();
           loadJson("libraries");
+          
         </script>
-    
       </div>
     </main>
   </body>

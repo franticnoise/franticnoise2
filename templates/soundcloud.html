@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Frantic Noise</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <script src="https://gumroad.com/js/gumroad.js"></script>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/style-iframe.css" />
-  </head>
+  <head id="head" />
 
   <body>
     <main>
@@ -33,8 +26,10 @@
               [466712427, 4],
               [849755113, 5],
             ];
-            import { createSoundcloud } from "../src/scripts2.js";
 
+            import { createSoundcloud, createHead } from "../src/scripts2.js";
+            createHead('Soundcloud Mixtapes');
+            
             soundcloud_list.forEach((activity) => {
 
               const soundcloudList = document.getElementById("container");

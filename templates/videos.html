@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Frantic Noise</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <script src="https://gumroad.com/js/gumroad.js"></script>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/style-iframe.css" />
-  </head>
+  <head id="head" />
+   
 
   <body>
     <main>
@@ -16,7 +10,6 @@
         <a
           href="http://www.youtube.com/z1priano"
           target="_blank"
-          style="color: #d889f0"
         >
           channel</a
         >
@@ -27,6 +20,7 @@
         class="maincontainer">
       
         <script type="module">
+          createHead('Party Videos');
           let youtube_list = [
             ["2kRfHfbx1dM", 1],
             ["vSIs9DxuEzE", 2],
@@ -34,7 +28,7 @@
             ["_rnSHTN0nRo", 4],
           ];
 
-          import { createYoutube } from "../src/scripts2.js";
+          import { createYoutube, createHead } from "../src/scripts2.js";
 
           youtube_list.forEach((activity) => {
             const youtubeList = document.getElementById("container");
@@ -47,8 +41,9 @@
             youtubeList.appendChild(createYoutubeDiv);
 
             createYoutube(activity[0], activity[1]);
+           
           });
-
+          
           //createYoutube("2kRfHfbx1dM", 1);
           //createYoutube("vSIs9DxuEzE", 2);
           //createYoutube("NzxsqsU5x_4", 3);

@@ -133,6 +133,7 @@ body {
 .infotext3 span {
   font-weight: 600;
 }
+
 .landingrow {
   display: block;
   background: rgba(13, 13, 13, 0.255);
@@ -145,16 +146,20 @@ body {
 }
 
 .infotext {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-weight: 500;
-  width: 100%;
+  width: 90%;
   font-size: 14px;
   color: #ffffff;
   margin-bottom: 20px;
   text-shadow: 2px 2px 1px rgb(0, 0, 0);
 }
-
+.infotext a {
+  font-weight: 600;
+  text-decoration:none;
+  color:#d889f0
+}
 .cell2_landing {
   width: 300px;
   color: #ffffff;
@@ -180,6 +185,7 @@ body {
 }
 .iframe_props {
   width: 90%;
+  border-radius: 18px;
 }
 .gumroad-button .logo-full {
   font-size: 11px;

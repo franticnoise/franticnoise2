@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Frantic Noise</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/style-iframe.css" />
-  </head>
+  <head id="head" />
 
   <body>
     <div class="mainlandingparent">
@@ -36,8 +29,8 @@
         let soundcloud_list = [
           [1368097705, 1],
         ];
-        import { createSoundcloud } from "../src/scripts2.js";
-
+        import { createSoundcloud,createHead } from "../src/scripts2.js";
+        createHead('Homepage');
         soundcloud_list.forEach((activity) => {
 
           const soundcloudList = document.getElementById("soundcloud");

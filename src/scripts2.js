@@ -24,12 +24,14 @@ export function createSoundcloud(cloud_link, idtarget ) {
     return (document.getElementById(idtarget).innerHTML = soundcloud);
 }
 
-export function createHead(pagename) {
-  const headinfo = `<title>Frantic Noise ${pagename}</title><meta charset="UTF-8" />` +
-    `<meta name="viewport" content="width=device-width" /><script src="https://gumroad.com/js/gumroad.js"></script>` +
-    `<link rel="stylesheet" href="css/styles.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>` +
-    `<link rel="stylesheet" href="css/style-iframe.css" />`;
-    return document.getElementById("head").innerHTML = headinfo
+export function createHead(pagename = '') {
+  const headinfo = `<title>Frantic Noise ${pagename}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width" ="device-width" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css/"/>
+  <link rel="stylesheet" href="../css/style-iframe.css" />`;
+  document.getElementById("head").innerHTML = headinfo
 }
 
 ////////////// GUMROAD JSON PARSE 
