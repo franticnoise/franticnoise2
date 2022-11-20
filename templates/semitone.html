@@ -4,7 +4,9 @@
  
   <body>
     <main> 
-      <p class="infotext"> BPM Semitone Shift Calculator<br>
+      <img style="margin-bottom: 10px;max-width:700px" class="gumroadimg" src="../img/WarpMarker.avif" />
+      
+      <p class="infotext">
         <small>We all know playing a song at a faster bpm increases the 
           frequency of the signal, making voices squirrely, but how many semitones 
           does a song shift when we increase 1 bpm? How many when we increase 10? 
@@ -12,14 +14,13 @@
           </p>
         </small>
         
-      <div class="infotext" style="margin-bottom: 20px;; "> 
+      <div class="infotext" style="margin-bottom: 20px;"> 
        
-      
         <form class="form_calc" onSubmit="">     
           <span>FROM</span>     
-          <input type="text" id="bpm_from" value="160" autofocus> 
+          <input type="number" id="bpm_from" value="150" autofocus> 
           <span>TO</span>
-          <input type="text" id="bpm_to" value="180" > 
+          <input type="number" id="bpm_to" value="180" > 
           <span>BPM</span>
           <button type="submit" id="calc_semitones" >Calculate</button>
         </form>
@@ -42,13 +43,22 @@
     event.preventDefault()
     const t1 = document.getElementById('bpm_from').value 
     const t2 = document.getElementById('bpm_to').value 
+    let valn2=Math.round((Math.log((+t2 - 20)/t1)/0.05776227)*100)/100;
+    let valn1=Math.round((Math.log((+t2 - 10)/t1)/0.05776227)*100)/100;
     let val=Math.round((Math.log(t2/t1)/0.05776227)*100)/100;
+    let valp1=Math.round((Math.log((+t2 + 10)/t1)/0.05776227)*100)/100;
+    let valp2=Math.round((Math.log((+t2 + 20)/t1)/0.05776227)*100)/100;
+    
     console.log(val)
 
     const resultsList = document.getElementById("container");
-   
+    if (Math.sign(val) !== -1) { val = '+' + val }
     let createResultDiv = document.createElement("div");
-    createResultDiv.innerHTML = `Going from ${t1}bpm to ${t2}bpms will shift ${val} semitones`;
+  // createResultDiv.innerHTML = `Going from ${t1} to ${(+t2 - 20)} BPM will shift ${valn2} semitones<br>`;
+  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 - 10)} BPM will shift ${valn1} semitones<br>`;
+    createResultDiv.innerHTML += `<span>Going from ${t1} to ${t2} BPM will transpose ${val} semitones</span><br>`;
+  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 + 10)} BPM will shift ${valp1} semitones<br>`;
+  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 + 20)} BPM will shift ${valp2} semitones<br>`;
     resultsList.appendChild(createResultDiv);
     
    

@@ -189,7 +189,7 @@ span {
 }
 
 .form_calc input {
-  width: 100px;
+  width: 80px;
   text-align: center;
   color: black;
   background-color: rgba(255, 255, 255, 0.9);
@@ -212,6 +212,11 @@ span {
   padding-top: 20px;
   gap: 10px;
 }
+.calculator span { 
+
+  font-size: 18px;
+  background-color: #7a59b8;
+ }
 .result_div {
   display: flex;
   align-items: center;
