@@ -34,16 +34,17 @@ export function createHead(pagename) {
 
 ////////////// GUMROAD JSON PARSE 
 
-
-
-export async function loadJson(section) {
-
+export function gumroadScripts() { 
   const script = document.createElement("script");
   script.src = "https://assets.gumroad.com/packs/js/overlay-499efd442e6f54649ee6.js";
   script.charset = "utf-8";
   document.head.appendChild(script);
   document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
-  
+}
+
+export async function loadJson(section) {
+
+
   
   const res = await fetch("../src/gumroad.json");
   const json = await res.json();
