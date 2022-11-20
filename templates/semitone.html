@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head" />
+ 
+  <body>
+    <main> 
+      <p class="infotext"> BPM Semitone Shift Calculator<br>
+        <small>We all know playing a song at a faster bpm increases the 
+          frequency of the signal, making voices squirrely, but how many semitones 
+          does a song shift when we increase 1 bpm? How many when we increase 10? 
+          Useful for refactoring the key of a highly bpm-altered track. 
+          </p>
+        </small>
+        
+      <div class="infotext" style="margin-bottom: 20px;; "> 
+       
+      
+        <form class="form_calc" onSubmit="">     
+          <span>FROM</span>     
+          <input type="text" id="bpm_from" value="160" autofocus> 
+          <span>TO</span>
+          <input type="text" id="bpm_to" value="180" > 
+          <span>BPM</span>
+          <button type="submit" id="calc_semitones" >Calculate</button>
+        </form>
+      </div>
+
+      <div id="container" class="calculator">
+
+      </div>
+      
+
+    </main>
+  </body>
+</html>
+<script type="module">    
+                    
+  createHead('BPM Delay Millisecond Calculator')
+  import { createHead, calcMs } from "../src/scripts2.js";
+  
+  document.getElementById("calc_semitones").addEventListener("click", function(event){
+    event.preventDefault()
+    const t1 = document.getElementById('bpm_from').value 
+    const t2 = document.getElementById('bpm_to').value 
+    let val=Math.round((Math.log(t2/t1)/0.05776227)*100)/100;
+    console.log(val)
+
+    const resultsList = document.getElementById("container");
+   
+    let createResultDiv = document.createElement("div");
+    createResultDiv.innerHTML = `Going from ${t1}bpm to ${t2}bpms will shift ${val} semitones`;
+    resultsList.appendChild(createResultDiv);
+    
+   
+  });
+
+
+</script>
