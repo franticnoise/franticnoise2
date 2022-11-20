@@ -18,20 +18,17 @@ export function createYoutube(video_link, idtarget ) {
 }
 
 export function createSoundcloud(cloud_link, idtarget ) {
-  const soundcloud =  `<iframe class="iframe_soundcloud" height="300" style="border-radius:18px"  scrolling="no" frameborder="no" allow="autoplay" class="iframe_souncloud" 
+  const soundcloud =  `<iframe scrolling="no" frameborder="no" allow="autoplay" class="iframe_souncloud" 
   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${cloud_link}&color=%23272626&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
   ></iframe>`
     return (document.getElementById(idtarget).innerHTML = soundcloud);
 }
-
-
 
 export function createHead(pagename) {
   const headinfo = `<title>Frantic Noise ${pagename}</title><meta charset="UTF-8" />` +
     `<meta name="viewport" content="width=device-width" /><script src="https://gumroad.com/js/gumroad.js"></script>` +
     `<link rel="stylesheet" href="css/styles.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>` +
     `<link rel="stylesheet" href="css/style-iframe.css" />`;
-
     return document.getElementById("head").innerHTML = headinfo
 }
 

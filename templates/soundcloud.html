@@ -23,7 +23,7 @@
       <div
         class="mainlandingparent"
       >
-        <div id="container" class="js-container" style="margin-top: 0px; width: 100%;">
+        <div id="container">
           
           <script type="module">
             let soundcloud_list = [
@@ -38,7 +38,7 @@
             soundcloud_list.forEach((activity) => {
 
               const soundcloudList = document.getElementById("container");
-              soundcloudList.className = "js-container";
+              soundcloudList.className = "js-container-soundcloud";
               let createSoundcloudDiv = document.createElement("div");
 
               createSoundcloudDiv.id = activity[1];

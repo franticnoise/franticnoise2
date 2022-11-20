@@ -13,11 +13,12 @@
   border-radius: 5px;
   background-color: rgb(187, 76, 150, 0.55);
 }
-body { overflow-x:hidden;background: transparent;}
+body {
+  overflow-x: hidden;
+  background: transparent;
+}
 
-
-
-.js-container { 
+.js-container {
   width: 100%;
   padding: 0px;
   display: flex;
@@ -27,50 +28,63 @@ body { overflow-x:hidden;background: transparent;}
   flex-wrap: wrap;
   align-items: center;
   border: 0px solid rgb(75, 44, 44);
-  
- 
 }
-.js-container-dual { display: flex;flex-direction:unset; justify-content: space-evenly; width: 100% }
+.js-container-dual {
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-evenly;
+  width: 100%;
+}
 .js-cell {
-
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
-
-  
+  width: 100%;
   display: table-cell;
   text-align: center;
   align-items: center;
   justify-content: center;
   text-align-last: center;
   border: 0px solid #fff;
-
 }
 .js-cellbandcamp {
-
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
   box-sizing: border-box;
   width: 43%;
-  border:0px solid white;
+  border: 0px solid white;
 
   text-align: center;
   align-items: center;
   justify-content: center;
   text-align-last: center;
-  
-
 }
+
+.js-container-soundcloud {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 2  0px;
+  padding-right: 20px;
+  padding-bottom: 20px;  
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align-last: center;
+  border: 0px solid #fff;
+}
+
 .gumroadimg__landing {
   width: 100%;
   margin: 00px;
   margin-top: 0px;
-  padding-right:00px;
+  padding-right: 00px;
   padding: 10px;
-  margin-bottom:4px;
+  margin-bottom: 4px;
 
   border-radius: 5px;
   align-self: center;
@@ -79,34 +93,39 @@ body { overflow-x:hidden;background: transparent;}
   width: 100%;
   margin: 00px;
   margin-top: 0px;
-  padding-right:00px;
+  padding-right: 00px;
   padding: 10px;
-  margin-bottom:4px;
+  margin-bottom: 4px;
 
   border-radius: 5px;
   align-self: center;
 }
-.js-cell-gumroad { padding: 10px 0px 20px 0px;width: 40%; }
+.js-cell-gumroad {
+  padding: 10px 0px 20px 0px;
+  width: 40%;
+}
 
-.infotext3 { 
+.infotext3 {
   color: #ffffff;
   font-size: 14px;
-  font-weight: 600;
-  margin:0px;
+  font-weight: 400;
+  margin: 0px;
   width: 100%;
-  padding:10px;
-  text-align: left; 
-  
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
 }
-.landingrow { 
-  display:block;
-  background: rgba(13, 13, 13, .255);
-  border-radius:10px;
-  
-
+.infotext3 span {
+  font-weight: 600;
+}
+.landingrow {
+  display: block;
+  background: rgba(13, 13, 13, 0.255);
+  border-radius: 10px;
 }
 .maincontainer {
-  margin-top:0px;
+  margin-top: 0px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -120,53 +139,107 @@ body { overflow-x:hidden;background: transparent;}
   color: #ffffff;
   margin-bottom: 20px;
   text-shadow: 2px 2px 1px rgb(0, 0, 0);
-} 
+}
 
 .cell2_landing {
   width: 300px;
   color: #ffffff;
   font-size: 16px;
-  font-weight:bold;
-  margin:0px;
-  padding:0px;
-   text-align: center; 
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
   align-items: center;
   justify-content: center;
   text-align-last: center;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   border: 0px solid #fff;
 }
-.home_link { color: rgba(231, 22, 161); font-weight: bold; }
-#cell { display: flex;flex-direction: column; gap: 4px;}
-.iframe_props { width: 90%;}
-.gumroad-button .logo-full { font-size:11px;}
-.gumroad-button span { display:none }
+.home_link {
+  color: rgba(231, 22, 161);
+  font-weight: bold;
+}
+#cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.iframe_props {
+  width: 90%;
+}
+.gumroad-button .logo-full {
+  font-size: 11px;
+}
+.gumroad-button span {
+  display: none;
+}
+
+.landingbandcampiframe {
+  border: 0px;
+  border-radius: 6px;
+  width: 100%;
+  height: 43px;
+}
+.iframe_soundcloud {
+  width: 100%;
+}
 @media (min-width: 768px) {
-  body { overflow-x:hidden;background: rgba(13, 13, 13, 0.10);}
-  .gumroadimg__landing {      width: 320px;  }
-  .gumroadimg__landing2 {      width: 620px;  }
-  .gumroadimg { max-width: 240px;}
-  .landingrow { 
-    display:flex;
+  body {
+    overflow-x: hidden;
+    background: rgba(13, 13, 13, 0.1);
+  }
+  .gumroadimg__landing {
+    width: 320px;
+  }
+  .gumroadimg__landing2 {
+    width: 620px;
+  }
+  .gumroadimg {
+    max-width: 240px;
+  }
+  .landingrow {
+    display: flex;
   }
   .infotext {
     margin-left: 80px;
     margin-right: 80px;
     font-weight: 600;
     width: 80%;
-    font-size: 18px;    
-  } 
-
-  .infotext3 { font-size: 14px; margin-top:10px}
-  .infotext3 span { font-size:16px; }
-  .infotext3 iframe { margin-top:26px; }
+    font-size: 18px;
+  }
+  .landingbandcampiframe {
+    width: 360px;
+  }
+  
+  .infotext3 {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    padding: 10px;
+    padding-right: 60px;
+  }
+  .infotext3 span {
+    font-size: 16px;
+  }
+  .infotext3 iframe {
+    margin-top: 26px;
+  }
   .maincontainer {
-    margin-top:0px;
+    margin-top: 0px;
     padding-left: 60px;
     padding-right: 60px;
   }
-  .iframe_props { width: 608px;}
-  .iframe_soundcloud { width: 700px;}
-  .gumroad-button span { display:block }
-  .js-cell-gumroad { width:35%; padding: 10px 0px 20px 0px }
+  .iframe_props {
+    width: 608px;
+  }
+  .iframe_soundcloud {
+    width: 700px;
+  }
+  .gumroad-button span {
+    display: block;
+  }
+  .js-cell-gumroad {
+    width: 35%;
+    padding: 10px 0px 20px 0px;
+  }
 }

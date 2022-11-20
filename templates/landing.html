@@ -26,7 +26,7 @@
           Frantic Noise presents to us once again an auditory serenade aimed at inspiring the next levels of human consciousness. 
           Four coded tracks contain the messages that will blast man into critical sonic awareness. Prepare for a carefully selected 
           philosophical arrangement that will make you Dance, stomp and ponder upon the age old questions.
-          <br></br><iframe style="border:0px; border-radius:6px; height: 43px;" 
+          <br></br><iframe class="landingbandcampiframe" 
           src="https://bandcamp.com/EmbeddedPlayer/album=91420019/size=small/bgcol=333333/linkcol=fe7eaf/artwork=none/transparent=true/" 
           seamless></iframe>        
         </div>
@@ -35,14 +35,13 @@
       <script type="module">
         let soundcloud_list = [
           [1368097705, 1],
-         
         ];
         import { createSoundcloud } from "../src/scripts2.js";
 
         soundcloud_list.forEach((activity) => {
 
           const soundcloudList = document.getElementById("soundcloud");
-          soundcloudList.className = "js-container";
+          soundcloudList.className = "js-container-soundcloud" ;
           let createSoundcloudDiv = document.createElement("div");
 
           createSoundcloudDiv.id = activity[1];
