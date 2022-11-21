@@ -39,7 +39,7 @@ body {
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   width: 100%;
   display: table-cell;
   text-align: center;
@@ -67,10 +67,10 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 5px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -309,11 +309,21 @@ body {
     width: 320px;
   }
   .gumroadimg__landing2 {
-    width: 620px;
+    width: 720px;
   }
   .gumroadimg {
     max-width: 240px;
     border-width: 4px;
+  }
+  .js-cell { 
+    padding-bottom: 5px;
+  }
+  .js-container-soundcloud {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    padding-bottom: 20px;
+ 
   }
   .landingrow {
     display: flex;

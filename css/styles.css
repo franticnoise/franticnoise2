@@ -105,7 +105,7 @@ h1 {
   color: #fff;
   padding: 16px 28px;
   width: 100px;
-  height: 50px;
+  height: 36px;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -136,13 +136,14 @@ h1 {
   margin-top: 20px;
   background: #fff;
   border-radius: 3px;
+  
   position: absolute;
 }
 
 .dropdown ul li a span {
   display: flex;
   padding: 16px 20px;
-  height: 50px;
+  height: 40px;
   color: #adadad;
   font-size: 10px;
   font-weight: bold;
@@ -188,18 +189,21 @@ h1 {
   display: none;
 }
 .dropdown.dropdown_desktop_icon ul {
-  width: 160px;
+  width: 140px;
+  
 }
 .dropdown.dropdown_desktop .text {
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: 8px;
 }
 
 .dropdown.dropdown_desktop_icon .text {
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: 8px;
 }
 
 .dropdown.dropdown_desktop ul li a {
@@ -214,8 +218,10 @@ h1 {
   margin: 5px;
   display: none;
 }
+
 .dropdown.dropdown_mobile .text {
   justify-content: center;
+  font-size: 8px;
 }
 
 .dropdown button.active + ul {
@@ -389,10 +395,20 @@ h2 a {
   }
   .dropdown button {
     width: 225px;
+    height: 50px;
   }
   .dropdown.dropdown_desktop_icon ul {
     width: 225px;
   }
+
+  .dropdown ul li a span {
+    height: 50px;
+  }
+
+  .dropdown.dropdown_desktop .text { font-size: 10px; }
+  .dropdown.dropdown_desktop_icon .text {font-size: 10px; }
+  .dropdown.dropdown_mobile .text {font-size: 10px; }
+
   .franticlogo {
     width: 300px;
   }
