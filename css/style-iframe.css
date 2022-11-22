@@ -209,7 +209,7 @@ body {
 
 .calculator {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600px;
   width: 100%;
   display: flex;
@@ -225,7 +225,7 @@ body {
 .calculator span { 
   border-radius: 10px;
   padding: 4px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   background-color: #7a59b8;
  }
@@ -310,6 +310,12 @@ body {
   }
   .gumroadimg__landing2 {
     width: 720px;
+  }
+  .calculator {
+    font-size: 16px;
+  }
+  .calculator span {
+    font-size: 18px;
   }
   .gumroadimg {
     max-width: 240px;
