@@ -44,5 +44,18 @@
     { "cat": "instrumentracks", "img": "b8a28d8ef.webp", "code": "UDQDVW"},
     { "cat": "instrumentracks", "img": "d8ef.webp", "code": "PufPD"},
     { "cat": "instrumentracks", "img": "instrumentracksdeffinal.png", "code": "GTdzO"} 
+    ],
+
+    "tooltips": [
+        { "synth": "PIGMENTS", "tooltip": "Presets for Arturia Pigments 3 VSTi"},
+        { "synth": "VITAL", "tooltip": "Presets for Vital Spectral Warping Wavetable Synthesizer"},
+        { "synth": "SERUM", "tooltip": "Presets for Xfer Records Serum VSTi"},
+        { "synth": "PHASE PLANT", "tooltip": "Presets for Kilohearts Phase Plant"},
+        { "synth": "VIRUS TI", "tooltip": "Presets for the legendary Access Virus TI"},
+        { "synth": "MASSIVE", "tooltip": "Presets for Native Instruments Massive and Massive X"},
+        { "synth": "KICK2", "tooltip": "Presets for Sonic Academy Kick 2 VSTi"},
+        { "synth": "VCV RACK", "tooltip": "Patches Virtual Eurorack Studio - VCV Rack 2"}
+        
     ]
+    
 }  

@@ -9,7 +9,7 @@
         Dive into our library of carefully crafted presets for your favourite VSTis. <br></h3>
       </p>
       <div id="container_types" class="synthtype_container"></div>
-        <div id="container" class="maincontainer">
+        <div id="container" class="tooltip-container">
        
         
           <script type="module">
@@ -22,7 +22,8 @@
             const synthtype = urlParams.get('type')
           
             loadJson("presets", synthtype);
-            
+
+           
           </script>
       
         </div>
