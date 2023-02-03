@@ -54,13 +54,14 @@
     const resultsList = document.getElementById("container");
     if (Math.sign(val) !== -1) { val = '+' + val }
     let createResultDiv = document.createElement("div");
-  // createResultDiv.innerHTML = `Going from ${t1} to ${(+t2 - 20)} BPM will shift ${valn2} semitones<br>`;
-  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 - 10)} BPM will shift ${valn1} semitones<br>`;
+    createResultDiv.id = 'resultado';
     createResultDiv.innerHTML += `<span>Going from ${t1} to ${t2} BPM will transpose ${val} semitones</span><br>`;
-  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 + 10)} BPM will shift ${valp1} semitones<br>`;
-  // createResultDiv.innerHTML += `Going from ${t1} to ${(+t2 + 20)} BPM will shift ${valp2} semitones<br>`;
-    resultsList.appendChild(createResultDiv);
     
+  if (!document.getElementById("resultado")) {
+    resultsList.appendChild(createResultDiv);
+  } else { 
+    resultsList.replaceChild(createResultDiv, document.getElementById("resultado"));
+  }
    
   });
 

@@ -6,18 +6,24 @@
 
       
       <p class="infotext">
-        Dive into our vast dimension of meticulously programmed patches including beautiful arpeggios, high energy FM leads, 
-        growling raspy wobbles as well as mind bending ominous ambiences and many other. <br></h3>
+        Dive into our vast library of meticulously programmed presets including beautiful ARPS, high energy FM leads, 
+        growling raspy wobbles as well as mind-bending ominous ambiences & more. <br></h3>
       </p>
-  
+      <div id="container_types" class="synthtype_container"></div>
         <div id="container" class="maincontainer">
        
         
           <script type="module">
             import { loadJson, gumroadScripts, createHead } from "../src/scripts2.js";
             createHead('Synth Presets');
-            gumroadScripts();            
-            loadJson("presets");
+            gumroadScripts();   
+            
+            const queryString = parent.window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const synthtype = urlParams.get('type')
+            console.log(synthtype);
+
+            loadJson("presets", synthtype);
             
           </script>
       

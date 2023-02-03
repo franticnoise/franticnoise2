@@ -38,7 +38,7 @@ export function createHead(pagename = '') {
 export function calcMs(speed){
 
   const result = 60000 / speed; 
-  console.log(result);
+  //console.log(result);
   const results = [];
   results.push(
     {'res': result * 2, 'math': "1/2"},
@@ -51,7 +51,7 @@ export function calcMs(speed){
     {'res': result / 8, 'math': "1/32"},
     {'res': result / 12, 'math': "1/32t"},
     {'res': result / 16, 'math': "1/64"});
-  console.table(results)
+  //console.table(results)
 
   const resultsList = document.getElementById("container");
   
@@ -60,7 +60,9 @@ export function calcMs(speed){
     let createResultRow = document.createElement("div");
     createResultRow.id = i;
     createResultRow.className = 'result_div';
-    resultsList.appendChild(createResultRow);    
+
+    !document.getElementById(i) ? resultsList.appendChild(createResultRow) : resultsList.replaceChild(createResultRow, document.getElementById(i));
+
     let bgClass = '';
     if(i % 2 == 0) {bgClass = 'result_bg';}
 
@@ -86,16 +88,49 @@ export function gumroadScripts() {
   document.head.innerHTML += '<link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-9325a7da.css" media="screen" />';
 }
 
-export async function loadJson(section) {
+export async function loadJson(section, type) {
 
-
-  
   const res = await fetch("../src/gumroad.json");
   const json = await res.json();
 
+  if (section === 'presets') {
+    //////// find/count total amount of banks for each type of vsti synth
+    let types = [ 'VITAL', 'SERUM', 'PHASE PLANT','PIGMENTS', 'MASSIVE', 'VIRUS TI', 'KICK2', 'VCV RACK'];
+    let total_banks = 0;
+
+    types.forEach(element => {
+      function getSynthType(synth) {
+        return json.gumroad.filter(data => data.synth == synth);
+      }
+      //console.log(`${element} has ${getSynthType(element).length} preset bank(s)`);
+      
+      const gumroadSynthType = document.getElementById("container_types");
+      let createTypeDiv = document.createElement("div");
+      
+      createTypeDiv.id = element;
+      element === type ? createTypeDiv.className = "js-synthtypes js-stypes_slctd" : createTypeDiv.className = "js-synthtypes";
+  
+      gumroadSynthType.appendChild(createTypeDiv);
+      document.getElementById(element).innerHTML = `
+      <a href="../index.html?page=presets&type=${element}" target="_parent">${element}</a> (${getSynthType(element).length})`;
+      total_banks = total_banks + getSynthType(element).length;
+    });
+    
+    /////////////// ADD 'VIEW ALL SYNTH' TAG / LInk console.log(`taotal banks: ${total_banks}`);
+    const gumroadSynthType = document.getElementById("container_types");
+    let createAllSynthDiv = document.createElement("div");
+    createAllSynthDiv.id = "ALL";
+    type === 'ALL' ? createAllSynthDiv.className = "js-synthtypes js-stypes_slctd" : createAllSynthDiv.className = "js-synthtypes";
+    gumroadSynthType.appendChild(createAllSynthDiv);
+    document.getElementById("ALL").innerHTML = `<a href="../index.html?page=presets&type=ALL" target="_parent">ALL</a> (${total_banks})`;
+  }
+
+/////
   let gid = 1;
   for (let i = 0; i < json.gumroad.length; i++) {
+    
     if (json.gumroad[i].cat === section) {
+      if (json.gumroad[i].synth === type || type === 'ALL') {
       const gumroadList = document.getElementById("container");
       gumroadList.className = "js-container js-container-dual";
       let createGumroadDiv = document.createElement("div");
@@ -110,5 +145,6 @@ export async function loadJson(section) {
       console.log(  json.gumroad[i].cat,json.gumroad[i].img,json.gumroad[i].code,gid);
       gid++;
     }
+  }
   }
 }

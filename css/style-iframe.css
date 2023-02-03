@@ -144,7 +144,6 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 .infotext {
   margin-left: 20px;
   margin-right: 20px;
@@ -300,6 +299,41 @@ body {
 .iframe_soundcloud {
   width: 100%;
 }
+
+.js-synthtypes {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:4px;padding-bottom: 4px;
+  color:white;
+  font-size:10px;
+  font-weight: bold;
+  background-color: #7a59b8;
+  margin:4px;
+  border-radius: 4px;
+  
+}
+.js-stypes_slctd { background-color: #503385 }
+.js-synthtypes:hover { 
+  background-color: #503385;
+}
+.js-synthtypes a { 
+  color:black;
+}
+.js-synthtypes a:visited { 
+  color:#d889f0;
+}
+.synthtype_container {
+  display:flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  
+}
+
 @media (min-width: 768px) {
   body {
     overflow-x: hidden;
@@ -331,6 +365,15 @@ body {
     padding-bottom: 20px;
  
   }
+  .js-synthtypes {
+    font-size:12px;       
+  }
+  .synthtype_container {
+
+      padding-left: 50px;
+      padding-right: 50px;
+      
+   }
   .landingrow {
     display: flex;
   }
@@ -339,7 +382,7 @@ body {
     margin-right: 80px;
     font-weight: 600;
     width: 80%;
-    font-size: 18px;
+    font-size: 16px;
   }
   .landingbandcampiframe {
     width: 360px;

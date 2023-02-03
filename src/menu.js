@@ -19,7 +19,7 @@ document.getElementById('myNav').innerHTML =
   "    <img src=svgs/synth3.svg width=25><span class='text'>&nbsp;Presets</span>" +
   '  </button>' +
   '  <ul>' +
-  '    <li><a href=index.html?page=presets><span class=text>Synth Presets</span></a></li>' +
+  '    <li><a href=index.html?page=presets&type=ALL><span class=text>Synth Presets</span></a></li>' +
   '    <li><a href=index.html?page=instrumentracks><span class=text>Instrument Racks</span></a></li>' +
   '    <li><a href=index.html?page=libraries><span class=text>Libraries &  Wavetables</span></a></li>' +
   '    <li><a href=index.html?page=templates><span class=text>RMX Packs & Templates</span></a></li>' +
