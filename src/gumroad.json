@@ -54,8 +54,7 @@
         { "synth": "VIRUS TI", "tooltip": "Presets for the legendary Access Virus TI"},
         { "synth": "MASSIVE", "tooltip": "Presets for Native Instruments Massive and Massive X"},
         { "synth": "KICK2", "tooltip": "Presets for Sonic Academy Kick 2 VSTi"},
-        { "synth": "VCV RACK", "tooltip": "Patches Virtual Eurorack Studio - VCV Rack 2"}
-        
+        { "synth": "VCV RACK", "tooltip": "Patches Virtual Eurorack Studio - VCV Rack 2"}        
     ]
     
 }  
