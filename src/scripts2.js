@@ -122,7 +122,7 @@ export async function loadJson(section, type) {
     createAllSynthDiv.id = "ALL";
     type === 'ALL' ? createAllSynthDiv.className = "js-synthtypes js-stypes_slctd" : createAllSynthDiv.className = "js-synthtypes";
     gumroadSynthType.appendChild(createAllSynthDiv);
-    document.getElementById("ALL").innerHTML = `<a href="../index.html?page=presets&type=ALL" target="_parent">ALL</a> (${total_banks})`;
+    document.getElementById("ALL").innerHTML = `<a href="../index.html?page=presets&type=ALL" target="_parent">ALL BANKS</a> (${total_banks})`;
   }
 
 /////
@@ -142,7 +142,7 @@ export async function loadJson(section, type) {
       
       document.getElementById(gid).innerHTML = `<div id="cell"><img class="gumroadimg" src="../img/${json.gumroad[i].img}"/>
       <a class="gumroad-button" href="https://franticnoise.gumroad.com/l/${json.gumroad[i].code}"><span>Buy on</span></a></div>`;
-      console.log(  json.gumroad[i].cat,json.gumroad[i].img,json.gumroad[i].code,gid);
+      //console.log(  json.gumroad[i].cat,json.gumroad[i].img,json.gumroad[i].code,gid);
       gid++;
     }
   }

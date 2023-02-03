@@ -301,15 +301,18 @@ body {
 }
 
 .js-synthtypes {
-  padding-left: 20px;
-  padding-right: 20px;
+
+  
+  padding-left: 14px;
+  padding-right: 14px;
   padding-top:4px;padding-bottom: 4px;
   color:white;
   font-size:10px;
   font-weight: bold;
   background-color: #7a59b8;
   margin:4px;
-  border-radius: 4px;
+  border-radius: 3px;
+  
   
 }
 .js-stypes_slctd { background-color: #503385 }
@@ -317,7 +320,8 @@ body {
   background-color: #503385;
 }
 .js-synthtypes a { 
-  color:black;
+  color:#d889f0;
+  text-shadow: 1px 1px black;
 }
 .js-synthtypes a:visited { 
   color:#d889f0;
