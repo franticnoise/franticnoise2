@@ -102,11 +102,9 @@ export async function loadJson(section, type) {
       function getSynthType(synth) {
         return json.gumroad.filter(data => data.synth == synth);
       }
-      //console.log(`${element} has ${getSynthType(element).length} preset bank(s)`);
-      
+     
       const gumroadSynthType = document.getElementById("container_types");
       let createTypeDiv = document.createElement("div");
-      
       createTypeDiv.id = element;
       element === type ? createTypeDiv.className = "js-synthtypes js-stypes_slctd" : createTypeDiv.className = "js-synthtypes";
   
