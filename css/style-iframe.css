@@ -105,6 +105,7 @@ body {
   width: 40%;
 }
 
+
 .gumroadimg {
   width: 100%;
   margin: 0px;
@@ -144,17 +145,30 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-.infotext {
-  margin-left: 20px;
-  margin-right: 20px;
-  font-weight: 500;
-  width: 90%;
-  font-size: 14px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 1px rgb(0, 0, 0);
+
+main { 
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
 
 }
+
+.infotext {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 500;
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  
+  justify-content: center;
+  text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+.infotext a { display: contents; }
+
 .infotext a {
   font-weight: 600;
   text-decoration: none;
@@ -413,10 +427,12 @@ body {
     display: flex;
   }
   .infotext {
-    margin-left: 80px;
-    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
     font-weight: 600;
-    width: 80%;
+    width: 100%;
     font-size: 16px;
   }
   .landingbandcampiframe {
@@ -443,6 +459,7 @@ body {
   }
   .iframe_props {
     width: 608px;
+    height: 340px;
   }
   .iframe_soundcloud {
     width: 700px;
