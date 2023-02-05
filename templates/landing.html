@@ -24,30 +24,55 @@
           seamless></iframe>        
         </div>
       </div>
-      <div id="soundcloud"></div>
+      <div class="sub_emaillistdiv">
+        <label>Subscribe to my email list!</label>
+        <form class="sub_emaillist" id="sub_form">
+          
+         
+          <input type="email" value="your.email@domain.com" onfocus="this.value=''" id="myInput" > 
+          <button type="submit" id="mySubmit" onclick="mySubmit()"><img src="../svgs/email-down-svgrepo-com.svg"></button>
+        </form>
+        <label id="successMessage"></label>
+        <label id="errorMessage"></label>
+      </div>
       <script type="module">
-        let soundcloud_list = [
-          [1368097705, 1],
-        ];
-        import { createSoundcloud,createHead } from "../src/scripts2.js";
+        let soundcloud_list = [[1368097705, 1],];
+        import { createHead } from "../src/scripts2.js";
         createHead('Homepage');
-        soundcloud_list.forEach((activity) => {
+       
+       document.getElementById("sub_form").addEventListener("click", function(event){event.preventDefault()});
 
-          const soundcloudList = document.getElementById("soundcloud");
-          soundcloudList.className = "js-container-soundcloud" ;
-          let createSoundcloudDiv = document.createElement("div");
+       document.getElementById("mySubmit").onclick = function mySubmit() {
+          let inputValue = document.getElementById("myInput").value;
+          let validated = inputValue.includes("@");
+          let successMessage = `Thanks for subscribing to our newsletter with ${inputValue}!`;
+          let errorMessage = "Sorry, the email address you entered is not valid";
 
-          createSoundcloudDiv.id = activity[1];
-          createSoundcloudDiv.className = "js-cell";
+          if(validated) {           
+            const emailValidation = document.getElementById("successMessage");
+            emailValidation.style.display = 'block';
+            emailValidation.innerHTML = successMessage;
+            emailValidation.className = "successMessage";
+            setTimeout(function(){emailValidation.style.display = 'none'}, 4000);
+                   
+            const response =  fetch(
+              "https://food-ordering-a-89cea-default-rtdb.firebaseio.com/cart.json",
+              { method: "PUT", body: JSON.stringify({'email': inputValue}) });
 
-          soundcloudList.appendChild(createSoundcloudDiv);
+            console.log(successMessage);    
 
-          createSoundcloud(activity[0], activity[1]);
-        });
+          } else {
 
-        //            console.table(soundcloud_list);
+            const emailValidation = document.getElementById("errorMessage");
+            emailValidation.style.display = 'block';
+            emailValidation.innerHTML = errorMessage;
+            emailValidation.className = "subErrorMsg";
+            setTimeout(function(){emailValidation.style.display = 'none'}, 4000);
+            console.log(errorMessage);
+          } 
+      }
       </script>
-        
+     
       <div id="landingrow">
           <div id="cell2_landing" >
             <a href="http://franticnoise.gumroad.com" target="_blank">

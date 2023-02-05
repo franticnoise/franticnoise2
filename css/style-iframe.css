@@ -146,10 +146,84 @@ body {
   padding-right: 20px;
 }
 
+
+
+
+.sub_emaillistdiv {
+  padding-top: 20px;
+  font-size: 16px;
+  color:white;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+ 
+}
+.sub_emaillistdiv label {
+  padding: 6px 4px 6px 4px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+}
+
+.subErrorMsg {
+  color:red;
+}
+
+.successMessage { 
+  color:chartreuse 
+}
+.sub_emaillist {
+  font-size: 16px;
+  color:white;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+ 
+}
+.sub_emaillist input {
+  font-size: 14px;
+  font-weight: bold;
+  color:rgb(59, 59, 59);
+  padding: 6px 4px 6px 10px;
+  margin-right:0px;
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid grey;
+  border-right:0px;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+
+}
+.sub_emaillist img { 
+  width: 14px;
+  padding-top: 2px;
+}
+.sub_emaillist button {
+  font-size: 14px;
+  width: 35px;
+  color:#d889f0;
+  background-color: rgb(49, 49, 49);
+  padding: 6px 4px 6px 4px;
+  border-radius: 0px 6px 6px 0px;
+  border: 1px solid grey;
+  border-left:0px;
+  cursor:pointer;
+}
+.sub_emaillist button:hover {
+  background-color: #5c5c5c;
+  
+}
+
 main { 
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
+  height: auto;
 
 }
 
