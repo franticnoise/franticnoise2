@@ -40,15 +40,29 @@
         import { createHead } from "../src/scripts2.js";
         createHead('Homepage');
        
+       
+
        document.getElementById("sub_form").addEventListener("click", function(event){event.preventDefault()});
 
        document.getElementById("mySubmit").onclick = function mySubmit() {
           let inputValue = document.getElementById("myInput").value;
-          let validated = inputValue.includes("@");
+          let validated_at = inputValue.includes("@");
           let successMessage = `Thanks for subscribing to our newsletter with ${inputValue}!`;
           let errorMessage = "Sorry, the email address you entered is not valid";
 
-          if(validated) {           
+          if (validated_at) { 
+          
+            let validationArray = inputValue.split("@");
+           if (validationArray[1].length > 0) { 
+              let validateDomain = true;
+              console.log(validationArray[1].length);
+            } else { 
+              let validateDomain = false;
+              console.log(validationArray[1].length + ' ' + validateDomain);
+            }  
+          }
+
+          if (validated_at && validateDomain) {           
             const emailValidation = document.getElementById("successMessage");
             emailValidation.style.display = 'block';
             emailValidation.innerHTML = successMessage;
@@ -58,8 +72,6 @@
             const response =  fetch(
               "https://food-ordering-a-89cea-default-rtdb.firebaseio.com/cart.json",
               { method: "PUT", body: JSON.stringify({'email': inputValue}) });
-
-            console.log(successMessage);    
 
           } else {
 

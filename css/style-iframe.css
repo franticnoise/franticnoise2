@@ -171,10 +171,12 @@ body {
 
 .subErrorMsg {
   color:red;
+  animation: fadeIn 0.6s;
 }
 
 .successMessage { 
-  color:chartreuse 
+  color:chartreuse;
+  animation: fadeIn 0.6s;
 }
 .sub_emaillist {
   font-size: 16px;
@@ -453,6 +455,10 @@ main {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /* TOOLTIP STYLES */
